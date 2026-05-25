@@ -53,3 +53,4 @@ DOWM={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/autoload_on_startup=false
