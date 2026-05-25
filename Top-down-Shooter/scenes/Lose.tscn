@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0bnkcc1rs4wl"]
+
+[ext_resource type="Texture2D" uid="uid://646ef0sxngct" path="res://assets/lose_2.png" id="1_05mc5"]
+
+[node name="Node2D" type="Node2D" unique_id=1552530354]
+
+[node name="Lose2" type="Sprite2D" parent="." unique_id=488493500]
+position = Vector2(580, 288)
+scale = Vector2(1.1946316, 1.1966039)
+texture = ExtResource("1_05mc5")
