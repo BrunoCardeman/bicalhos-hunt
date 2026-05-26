@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bq58i1dqkch2f"]
 
 [ext_resource type="Texture2D" uid="uid://cqa4k6ced0rhy" path="res://assets/Mapa.jpeg" id="1_2jh14"]
-[ext_resource type="Script" uid="uid://dwylwup41w3ly" path="res://Point.gd" id="2_q8ihy"]
+[ext_resource type="Script" uid="uid://dwylwup41w3ly" path="res://scripts/Point.gd" id="2_q8ihy"]
 [ext_resource type="Texture2D" uid="uid://do0iu3bipp3ta" path="res://assets/4467108.png" id="3_lrjei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d3jg"]
@@ -168,3 +168,28 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Ginasio"
+
+[node name="CorredoPUC" type="Area2D" parent="." unique_id=551657724]
+position = Vector2(364, 183)
+script = ExtResource("2_q8ihy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CorredoPUC" unique_id=399668660]
+scale = Vector2(0.14453125, 0.14453125)
+texture = ExtResource("3_lrjei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CorredoPUC" unique_id=110655192]
+visible = false
+shape = SubResource("RectangleShape2D_5d3jg")
+
+[node name="Balao" type="PanelContainer" parent="CorredoPUC" unique_id=1634672459]
+texture_filter = 1
+offset_left = 15.0
+offset_top = -77.0
+offset_right = 65.0
+offset_bottom = -27.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
+
+[node name="Label" type="Label" parent="CorredoPUC/Balao" unique_id=1727789050]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Corredor do Leme"
