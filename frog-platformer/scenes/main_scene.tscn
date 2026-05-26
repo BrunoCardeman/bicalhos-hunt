@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://c1hpvadr5rfae" path="res://assets/TopDownHouse_FloorsAndWalls.png" id="1_6wevv"]
 [ext_resource type="Script" uid="uid://cx2qfcj3evkub" path="res://scenes/player_controller.gd" id="1_pw63i"]
+[ext_resource type="Texture2D" uid="uid://bg3auh0atokeu" path="res://assets/Gemini_Generated_Image_8p5ths8p5ths8p5t.png" id="2_c1pb6"]
+[ext_resource type="Texture2D" uid="uid://dqq6sx8f8grpd" path="res://assets/Gemini_Generated_Image_vfony8vfony8vfon.png" id="3_6wevv"]
 [ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://assets/Characters_V3_Colour.png" id="3_c16ls"]
 [ext_resource type="Texture2D" uid="uid://d0syoootg8j00" path="res://assets/TopDownHouse_SmallItems.png" id="8_6wevv"]
 [ext_resource type="Script" uid="uid://c3rsrkp4jlmg" path="res://scenes/collectable_controller.gd" id="8_c1pb6"]
@@ -119,12 +121,20 @@ animations = [{
 
 [node name="TopDownHouseFloorsAndWalls" type="Sprite2D" parent="." unique_id=1203958139]
 texture_repeat = 2
-position = Vector2(1567.4617, 395.6411)
-rotation = 3.1415927
-scale = Vector2(52.09974, 15.469782)
+position = Vector2(1362.749, 395.64108)
+rotation = -3.1415925
+scale = Vector2(45.292377, 16.100464)
 texture = SubResource("AtlasTexture_jix7a")
 region_enabled = true
 region_rect = Rect2(0.9386139, 0.78772354, 60.46143, 50.92809)
+
+[node name="GeminiGeneratedImage8p5Ths8p5Ths8p5t" type="Sprite2D" parent="." unique_id=752144864]
+position = Vector2(689.5, 418)
+texture = ExtResource("2_c1pb6")
+
+[node name="GeminiGeneratedImageVfony8Vfony8Vfon" type="Sprite2D" parent="." unique_id=1976814348]
+position = Vector2(2042.5, 418)
+texture = ExtResource("3_6wevv")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1868172745 node_paths=PackedStringArray("sprite2d", "pointsUI", "initialPosition", "background")]
 position = Vector2(93, 74.00003)
