@@ -4274,7 +4274,7 @@ tile_map_data = PackedByteArray("AAAAAC0AAgAJABIAAAAAAC4AAgAJABMAAAAAAC8AAgAJABQ
 tile_set = SubResource("TileSet_mngbo")
 
 [node name="Paper1" type="Area2D" parent="." unique_id=471997235]
-position = Vector2(1086, 464)
+position = Vector2(595, 475)
 scale = Vector2(2, 2)
 script = ExtResource("8_c1pb6")
 
@@ -4299,7 +4299,7 @@ background = NodePath("../TopDownHouseFloorsAndWalls")
 position = Vector2(100, 250)
 
 [node name="enemy" parent="." unique_id=1567395663 instance=ExtResource("11_e1cbu")]
-position = Vector2(785, 500)
+position = Vector2(1242, 560.99994)
 scale = Vector2(1.1522738, 1.6257958)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=229990874]
