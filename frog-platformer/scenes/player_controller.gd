@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var sprite2d: AnimatedSprite2D
 @export var pointsUI: Label
+@export var vidasUI: Label
 @export var initialPosition: Node2D
 @export var background: Sprite2D
 var points = 0
@@ -19,8 +20,9 @@ func _physics_process(delta: float) -> void:
 	var bg_height = background.region_rect.size.y * background.scale.y
 	if self.position.y > bg_height:
 		vidas -= 1
+		vidasUI.text = "Vidas: " + str(vidas)
 		if vidas == 0:
-			print("Perdeu")
+			perder_jogo()
 		self.position = initialPosition.position
 		#resetar camera!!
 	if is_on_floor():
@@ -67,7 +69,11 @@ func update_points():
 func vencer_jogo():
 	print("Você Ganhou!")
 	
-	# Pausa o jogo para o jogador e os inimigos pararem de se mover
+	get_tree().paused = true
+	
+func perder_jogo():
+	print("Você Perdeu!")
+	
 	get_tree().paused = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -78,6 +84,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			self.velocity.y = JUMP_VELOCITY 			
 		else:
 			vidas -= 1
+			#print(vidas)
+			vidasUI.text = "Vidas: " + str(vidas)
 			if vidas == 0:
-				print("Perdeu")
+				perder_jogo()
 			self.position = initialPosition.position
