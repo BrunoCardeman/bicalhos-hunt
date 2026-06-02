@@ -61,7 +61,14 @@ func _physics_process(delta: float) -> void:
 func update_points():
 	points += 10
 	pointsUI.text = "Points: " + str(points)
-
+	if points >= 100:
+		vencer_jogo()
+		
+func vencer_jogo():
+	print("Você Ganhou!")
+	
+	# Pausa o jogo para o jogador e os inimigos pararem de se mover
+	get_tree().paused = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	#print("encostei no ", body.name)
