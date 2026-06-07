@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dyf1i6urojmnd"]
+
+[ext_resource type="Script" uid="uid://c3rsrkp4jlmg" path="res://scripts/collectable_controller.gd" id="1_vas6c"]
+[ext_resource type="Texture2D" uid="uid://d0syoootg8j00" path="res://assets/TopDownHouse_SmallItems.png" id="2_cbjgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1pb6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k67gn"]
+atlas = ExtResource("2_cbjgq")
+region = Rect2(32, 18, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3g67"]
+atlas = ExtResource("2_cbjgq")
+region = Rect2(48, 18, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jix7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k67gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3g67")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Paper1" type="Area2D" unique_id=2062965006]
+scale = Vector2(2, 2)
+script = ExtResource("1_vas6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=365738460]
+shape = SubResource("RectangleShape2D_c1pb6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813075436]
+sprite_frames = SubResource("SpriteFrames_jix7a")
+autoplay = "default"
+frame_progress = 0.015488255
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
