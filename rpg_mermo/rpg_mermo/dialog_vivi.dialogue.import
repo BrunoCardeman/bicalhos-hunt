@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dx3dtxetmn3yl"
+path="res://.godot/imported/dialog_vivi.dialogue-7a0ba8fa4ff73cdabf531a1c23b68a74.tres"
+
+[deps]
+
+source_file="res://dialog_vivi.dialogue"
+dest_files=["res://.godot/imported/dialog_vivi.dialogue-7a0ba8fa4ff73cdabf531a1c23b68a74.tres"]
+
+[params]
+
+defaults=true
