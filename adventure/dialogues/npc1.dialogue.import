@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dgbwaud31hai"
+path="res://.godot/imported/npc1.dialogue-0e51ebcd256167711dfba3681fd95a61.tres"
+
+[deps]
+
+source_file="res://adventure/dialogues/npc1.dialogue"
+dest_files=["res://.godot/imported/npc1.dialogue-0e51ebcd256167711dfba3681fd95a61.tres"]
+
+[params]
+
+defaults=true

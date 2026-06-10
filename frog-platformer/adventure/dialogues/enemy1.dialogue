@@ -1,0 +1,22 @@
+~ start
+if GlobalData.enemy1_defeated
+    => derrotado
+
+if not GlobalData.has_sword
+    => sem_espada
+
+Mago: Alto lá, estrangeiro!
+Mago: Este deserto é proibido para forasteiros.
+Mago: Você vai ter que passar por mim!
+=> END
+
+~ sem_espada
+Mago: Alto lá, estrangeiro!
+Mago: Você nem tem uma arma...
+Mago: Volte à aldeia e se prepare antes de me enfrentar!
+=> END
+
+~ derrotado
+Mago: Você é muito forte...
+Mago: Pode passar, aventureiro.
+=> END

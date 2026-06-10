@@ -1,0 +1,23 @@
+~ start
+
+Velhinho: Olá, aventureiro! Que bom que chegou.
+Velhinho: A caverna ao norte está cheia de monstros perigosos...
+
+if GlobalData.has_sword
+    Velhinho: Você já tem a espada. Boa sorte na caverna!
+    => END
+
+Velhinho: Tenho uma espada que pode te ajudar. Aceita?
+- Sim, aceito!
+    => aceitar
+- Não, obrigado.
+    => recusar
+
+~ aceitar
+Velhinho: Ótima escolha! Tome a espada e seja cuidadoso.
+set GlobalData.has_sword = true
+=> END
+
+~ recusar
+Velhinho: Tudo bem. Se mudar de ideia, estarei aqui.
+=> END

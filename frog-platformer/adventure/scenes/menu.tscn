@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ule1rcgpyda0"]
+
+[ext_resource type="Script" uid="uid://djw71nyikyhg1" path="res://scenes/menu.gd" id="1_yqeox"]
+
+[node name="menu" type="Control" unique_id=1695174300]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yqeox")
+
+[node name="Label" type="Label" parent="." unique_id=1598602815]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 123.0
+offset_right = 702.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 50
+text = "🗡️ Adventure RPG"
+
+[node name="BotaoJogar" type="Button" parent="." unique_id=937894787]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 239.0
+offset_right = 658.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 50
+text = "play"
+
+[node name="BotaoSair" type="Button" parent="." unique_id=1165122087]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 350.0
+offset_right = 654.0
+offset_bottom = 427.0
+theme_override_font_sizes/font_size = 50
+text = "quit"

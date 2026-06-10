@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://deic6jj3nfhh"]
+
+[ext_resource type="Script" uid="uid://ug4jr3pj83fc" path="res://enemy_1.gd" id="1_nb0t0"]
+[ext_resource type="Texture2D" uid="uid://dpgmk3uhd0nq7" path="res://assets/2x/Bartender_idle.png" id="1_ppmo8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb0t0"]
+atlas = ExtResource("1_ppmo8")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n665k"]
+atlas = ExtResource("1_ppmo8")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lowyn"]
+atlas = ExtResource("1_ppmo8")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iolyx"]
+atlas = ExtResource("1_ppmo8")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r5cnx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb0t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n665k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lowyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iolyx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppmo8"]
+size = Vector2(43, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb0t0"]
+size = Vector2(57, 63)
+
+[node name="enemy1" type="StaticBody2D" unique_id=279500280]
+script = ExtResource("1_nb0t0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=246684299]
+sprite_frames = SubResource("SpriteFrames_r5cnx")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116726442]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_ppmo8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1668074635]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1933322091]
+position = Vector2(-1, 11)
+shape = SubResource("RectangleShape2D_nb0t0")
+
+[node name="Label" type="Label" parent="." unique_id=90129828]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "\"[Enter] Falar\""
+metadata/_edit_use_anchors_ = true

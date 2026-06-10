@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dgbwaud31hai"
+path="res://.godot/imported/npc1.dialogue-2db81813a0d27c4ad1de97075cd48826.tres"
+
+[deps]
+
+source_file="res://frog-platformer/adventure/dialogues/npc1.dialogue"
+dest_files=["res://.godot/imported/npc1.dialogue-2db81813a0d27c4ad1de97075cd48826.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,80 @@
+~ start
+
+Vivi: Ei, aluno! Espera um segundo!
+Aluno: O que foi, Vivi?
+Vivi: Você está no Corredor da PUC. Sabe o que isso significa?
+Aluno: Que eu preciso chegar logo onde o Bicalho está?
+Vivi: Sim! Mas sua reputação depende do que você faz por aqui.
+Vivi: Notas boas te ajudam a subir na consideração de todo mundo. Notas ruins... bem, você já imagina.
+Aluno: E o que eu faço aqui exatamente?
+Vivi: Navegue pelo corredor e colete o que aparecer no caminho.
+Vivi: Pegue notas altas para aumentar sua reputação. Elas vão direto pro seu inventário.
+Vivi: Moedas também aparecem. Guarda bem, você vai precisar pra comer!
+Vivi: Peças de PC são especiais, podem ser usadas em missões ou trocadas com NPCs.
+Aluno: E os itens ruins?
+Vivi: Cola de prova? Sua reputação despenca se pegar. Os professores têm olhos em todo lugar.
+Vivi: Prova em branco é ainda pior. Te atrasa e descarta nota do inventário.
+Aluno: Entendi. Reputação boa me ajuda a achar o Bicalho?
+Vivi: Exato! NPCs que virem você com notas altas vão dar dicas sobre onde ele está.
+Vivi: Mas se sua reputação estiver no chão, eles ignoram ou te passam informação errada.
+Vivi: Volte aqui depois de jogar. Dependendo de como for, eu te conto o que sei.
+set GlobalData.falou_com_vivi_snake = true
+
+- Ir jogar no Corredor da PUC
+	Aluno: Tô dentro. Vou mostrar do que sou capaz!
+	Vivi: Boa sorte! Cuida das notas e foge da cola!
+	set GlobalData.jogou_minigame_snake = true
+	set GlobalData.ir_para_snake = true
+	=> END
+
+- Agora não.
+	Aluno: Deixa pra depois, Vivi.
+	Vivi: Tudo bem. Mas corre, o Bicalho não fica parado!
+	=> END
+
+~ perguntar_de_novo
+
+Vivi: E aí, pronto pra jogar no Corredor da PUC?
+
+- Vamos lá!
+	Aluno: Agora sim, bora!
+	Vivi: Boa sorte! Foca nas notas boas!
+	set GlobalData.jogou_minigame_snake = true
+	set GlobalData.ir_para_snake = true
+	=> END
+
+- Ainda não.
+	Aluno: Ainda não, Vivi.
+	Vivi: Tudo bem. Quando quiser, é só falar!
+	=> END
+
+~ avaliar_reputacao
+
+if GlobalData.reputacao >= 5:
+	Vivi: Que jogo incrível! Sua reputação está nas alturas. Todo mundo fala de você nos corredores!
+	Vivi: Você provou que é um aluno dedicado. Merece saber o que descobri.
+	Vivi: O Bicalho foi visto passando pelo DI!
+	Vivi: Ele deixou alguns papéis com pistas caídos pelo caminho. Vai lá investigar!
+	=> END
+
+elif GlobalData.reputacao >= -4:
+	Vivi: Vi que você sobreviveu ao corredor. Reputação continua na média, mas tá valendo.
+	Vivi: O Bicalho costuma circular por áreas onde a galera vai pra recuperar a stamina.
+	Vivi: Se eu fosse você, procuraria perto do Bandejão ou do Minhocão.
+	=> END
+
+else:
+	Vivi: Cara... sua reputação está péssima. Ninguém vai te dar informação assim.
+	Aluno: Então preciso melhorar antes de continuar?
+	Vivi: Exatamente. Volta pro corredor e prova que é capaz. Sem cola dessa vez!
+
+	- Jogar de novo
+		Aluno: Tudo bem, vou voltar e provar que sou capaz.
+		Vivi: Isso! Foca nas notas boas e esquece a cola!
+		set GlobalData.ir_para_snake = true
+		=> END
+
+	- Deixa pra depois
+		Aluno: Vou pensar em outra coisa primeiro.
+		Vivi: Tudo bem. Mas não demora, o Bicalho não fica parado!
+		=> END
