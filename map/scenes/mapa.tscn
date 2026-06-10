@@ -72,6 +72,7 @@ e comprar itens para recarregar as a fome"
 [node name="sala 540" type="Area2D" parent="." unique_id=328328015]
 position = Vector2(586, 117)
 script = ExtResource("2_ofv12")
+caminho = "res://540/scenes/540.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="sala 540" unique_id=1721702710]
 scale = Vector2(0.14453125, 0.14453125)
@@ -97,6 +98,7 @@ text = "Sala 540"
 [node name="RDC" type="Area2D" parent="." unique_id=1099798630]
 position = Vector2(735, 89)
 script = ExtResource("2_ofv12")
+caminho = "res://rpg_plataformer/scenes/pre_platformer.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="RDC" unique_id=219073739]
 scale = Vector2(0.14453125, 0.14453125)
@@ -172,6 +174,7 @@ text = "Ginasio"
 [node name="CorredoPUC" type="Area2D" parent="." unique_id=551657724]
 position = Vector2(364, 183)
 script = ExtResource("2_ofv12")
+caminho = "res://adventure/scenes/mundo1.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="CorredoPUC" unique_id=399668660]
 scale = Vector2(0.14453125, 0.14453125)

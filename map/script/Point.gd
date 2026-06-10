@@ -1,7 +1,7 @@
 extends Area2D
 
 # Permite mudar o texto de cada ponto direto no Inspector do mapa
-
+@export var caminho: String
 # Pega a referência do balão e do texto que criamos
 @onready var balao: PanelContainer = $Balao
 @onready var label_texto: Label = $Balao/Label
@@ -40,7 +40,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		var posicao_local = event.position
 		
 		# Printa as informações no console do Godot
-		print("Clicou no ponto: ", name)
-		print("Posição Global no mapa: ", posicao_global)
-		print("Posição Local dentro da área: ", posicao_local)
-		print("---")
+		get_tree().change_scene_to_file(caminho)

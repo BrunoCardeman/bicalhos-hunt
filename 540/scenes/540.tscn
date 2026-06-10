@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://cqg12hle1yqd8" path="res://resources/egg.tres" id="4_h1xtv"]
 [ext_resource type="Resource" uid="uid://q50pujxqyuva" path="res://resources/apple.tres" id="5_aiwyf"]
 [ext_resource type="Texture2D" uid="uid://c587l417mkha8" path="res://Top-down-Shooter/assets/Characters/Basic Charakter Spritesheet.png" id="6_uoado"]
+[ext_resource type="Texture2D" uid="uid://bwetbj0aa0mdi" path="res://540/assets/Gemini_Generated_Image_ghcaughcaughcaug-Photoroom.png" id="7_0xbl4"]
 
 [sub_resource type="Resource" id="Resource_j7wrs"]
 script = ExtResource("3_f1s8j")
@@ -187,6 +188,24 @@ size = Vector2(1103.75, 119.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7opdr"]
 size = Vector2(170.5, 106)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1s8j"]
+size = Vector2(67, 168)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1xtv"]
+atlas = ExtResource("7_0xbl4")
+region = Rect2(0, 0, 96, 243)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aiwyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1xtv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="540" type="Node2D" unique_id=285912431]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1651606171]
@@ -244,5 +263,16 @@ shape = SubResource("RectangleShape2D_1bkha")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1510653094]
 position = Vector2(315.75, 280)
 shape = SubResource("RectangleShape2D_7opdr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1792512835]
+position = Vector2(412, 186)
+scale = Vector2(1, 1.44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=9409544]
+position = Vector2(11.5, 25)
+shape = SubResource("RectangleShape2D_f1s8j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=1225690461]
+sprite_frames = SubResource("SpriteFrames_aiwyf")
 
 [connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
