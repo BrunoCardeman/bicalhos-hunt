@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameController="*uid://qui1f6vcrm5y"
+DialogueManager="*uid://c3rodes2l3gxb"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -46,11 +51,16 @@ DOWM={
 ]
 }
 
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialog_tutorial.dialogue", "res://dialog_vivi.dialogue")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 textures/autoload_on_startup=false

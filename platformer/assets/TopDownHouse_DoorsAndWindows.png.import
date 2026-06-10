@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgj6cgaimsooh"
-path="res://.godot/imported/TopDownHouse_DoorsAndWindows.png-05973861e1d12ad78cd22b2bbe14f958.ctex"
+path="res://.godot/imported/TopDownHouse_DoorsAndWindows.png-14e34bec1ef75a7bfa72bdfe79f1acac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TopDownHouse_DoorsAndWindows.png"
-dest_files=["res://.godot/imported/TopDownHouse_DoorsAndWindows.png-05973861e1d12ad78cd22b2bbe14f958.ctex"]
+source_file="res://platformer/assets/TopDownHouse_DoorsAndWindows.png"
+dest_files=["res://.godot/imported/TopDownHouse_DoorsAndWindows.png-14e34bec1ef75a7bfa72bdfe79f1acac.ctex"]
 
 [params]
 

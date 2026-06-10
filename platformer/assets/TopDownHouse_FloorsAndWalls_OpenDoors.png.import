@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv01xkarrfmob"
-path="res://.godot/imported/TopDownHouse_FloorsAndWalls_OpenDoors.png-2b278a31ed32a9860417e23352bf1de9.ctex"
+path="res://.godot/imported/TopDownHouse_FloorsAndWalls_OpenDoors.png-279d8368f15f0a7a4b505850b6c54e37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TopDownHouse_FloorsAndWalls_OpenDoors.png"
-dest_files=["res://.godot/imported/TopDownHouse_FloorsAndWalls_OpenDoors.png-2b278a31ed32a9860417e23352bf1de9.ctex"]
+source_file="res://platformer/assets/TopDownHouse_FloorsAndWalls_OpenDoors.png"
+dest_files=["res://.godot/imported/TopDownHouse_FloorsAndWalls_OpenDoors.png-279d8368f15f0a7a4b505850b6c54e37.ctex"]
 
 [params]
 

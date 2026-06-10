@@ -1,14 +1,14 @@
 [gd_scene format=4 uid="uid://gymtg42v2c8"]
 
-[ext_resource type="Texture2D" uid="uid://c1hpvadr5rfae" path="res://assets/TopDownHouse_FloorsAndWalls.png" id="1_txcic"]
-[ext_resource type="Texture2D" uid="uid://bg3auh0atokeu" path="res://assets/Gemini_Generated_Image_8p5ths8p5ths8p5t.png" id="2_v5gpo"]
-[ext_resource type="Texture2D" uid="uid://dqq6sx8f8grpd" path="res://assets/Gemini_Generated_Image_vfony8vfony8vfon.png" id="3_v4035"]
-[ext_resource type="Script" uid="uid://cx2qfcj3evkub" path="res://scripts/player_controller.gd" id="4_6yj8j"]
-[ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://assets/Characters_V3_Colour.png" id="5_qoqfw"]
-[ext_resource type="Texture2D" uid="uid://cacsihmk5a2a0" path="res://assets/Gemini_Generated_Image_iqlh18iqlh18iqlh.png" id="6_0fs5j"]
-[ext_resource type="PackedScene" uid="uid://dyf1i6urojmnd" path="res://scenes/paper.tscn" id="7_crvc6"]
-[ext_resource type="Script" uid="uid://bdqj7y7osra12" path="res://scripts/camera_controller.gd" id="8_vi78m"]
-[ext_resource type="PackedScene" uid="uid://bcgsngugceotg" path="res://scenes/enemy.tscn" id="9_850bg"]
+[ext_resource type="Texture2D" uid="uid://c1hpvadr5rfae" path="res://platformer/assets/TopDownHouse_FloorsAndWalls.png" id="1_txcic"]
+[ext_resource type="Texture2D" uid="uid://bg3auh0atokeu" path="res://platformer/assets/Gemini_Generated_Image_8p5ths8p5ths8p5t.png" id="2_v5gpo"]
+[ext_resource type="Texture2D" uid="uid://dqq6sx8f8grpd" path="res://platformer/assets/Gemini_Generated_Image_vfony8vfony8vfon.png" id="3_v4035"]
+[ext_resource type="Script" uid="uid://cx2qfcj3evkub" path="res://platformer/scripts/player_controller.gd" id="4_6yj8j"]
+[ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://platformer/assets/Characters_V3_Colour.png" id="5_qoqfw"]
+[ext_resource type="Texture2D" uid="uid://cacsihmk5a2a0" path="res://platformer/assets/Gemini_Generated_Image_iqlh18iqlh18iqlh.png" id="6_0fs5j"]
+[ext_resource type="PackedScene" uid="uid://dyf1i6urojmnd" path="res://platformer/scenes/paper.tscn" id="7_crvc6"]
+[ext_resource type="Script" uid="uid://bdqj7y7osra12" path="res://platformer/scripts/camera_controller.gd" id="8_vi78m"]
+[ext_resource type="PackedScene" uid="uid://bcgsngugceotg" path="res://platformer/scenes/enemy.tscn" id="9_850bg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jix7a"]
 atlas = ExtResource("1_txcic")
