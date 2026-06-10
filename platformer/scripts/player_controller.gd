@@ -69,12 +69,12 @@ func update_points():
 func vencer_jogo():
 	print("Você Ganhou!")
 	
-	get_tree().paused = true
+	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
 	
 func perder_jogo():
 	print("Você Perdeu!")
 	
-	get_tree().paused = true
+	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	#print("encostei no ", body.name)

@@ -13,4 +13,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	DialogueManager.show_dialogue_balloon(main_dialogue)
+	DialogueManager.show_dialogue_balloon(main_dialogue, "start", [self])
+func ir_para_o_platformer():
+	get_tree().change_scene_to_file("res://platformer/scenes/platformer.tscn")
