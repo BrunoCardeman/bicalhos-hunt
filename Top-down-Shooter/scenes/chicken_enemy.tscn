@@ -1,49 +1,28 @@
 [gd_scene format=3 uid="uid://dknuvy2kvo7mu"]
 
 [ext_resource type="Script" uid="uid://jk5722otk4iy" path="res://Top-down-Shooter/script/chicken_enemy.gd" id="1_gow3e"]
-[ext_resource type="Texture2D" uid="uid://ovxgtf22xjqi" path="res://Top-down-Shooter/assets/Characters/Free Chicken Sprites.png" id="2_bkyy3"]
+[ext_resource type="Texture2D" uid="uid://sksgmgn1fe48" path="res://Top-down-Shooter/assets/Gemini_Generated_Image_3wc7j73wc7j73wc7-removebg-preview.png" id="2_gow3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh0fu"]
 size = Vector2(20, 20.666668)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3m5ht"]
-atlas = ExtResource("2_bkyy3")
-region = Rect2(0, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dubn7"]
-atlas = ExtResource("2_bkyy3")
-region = Rect2(16, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_08kqv"]
-atlas = ExtResource("2_bkyy3")
-region = Rect2(32, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f6ptj"]
-atlas = ExtResource("2_bkyy3")
-region = Rect2(48, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkyy3"]
+atlas = ExtResource("2_gow3e")
+region = Rect2(0, 0, 676, 369)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hsdmi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3m5ht")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dubn7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_08kqv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f6ptj")
+"texture": SubResource("AtlasTexture_bkyy3")
 }],
 "loop": true,
-"name": &"chicken",
+"name": &"virus",
 "speed": 5.0
 }]
 
 [node name="Area2D" type="Area2D" unique_id=1025105490]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.8833679, 2.3168736)
 script = ExtResource("1_gow3e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438022988]
@@ -52,8 +31,10 @@ shape = SubResource("RectangleShape2D_hh0fu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=619518538]
 texture_filter = 1
+position = Vector2(0, 2.0618553)
+scale = Vector2(0.09708356, 0.09708355)
 sprite_frames = SubResource("SpriteFrames_hsdmi")
-animation = &"chicken"
-autoplay = "chicken"
+animation = &"virus"
+autoplay = "virus"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

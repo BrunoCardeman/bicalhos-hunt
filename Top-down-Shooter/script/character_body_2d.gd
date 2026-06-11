@@ -34,17 +34,10 @@ func _ready():
 			slot_sprite.texture = slot.item.sprite
 			slot_sprite.position.y = 8
 			slot_sprite.position.x = 16 * i + 6
-
-
-func _input(event):
-	if event is InputEventKey:
-		if event.pressed and not event.echo: # Check for a new key press, not a held-down echo
-			if event.keycode == KEY_1:
-				selected_item = inventory[0].item
-			elif event.keycode == KEY_2:
-				selected_item = inventory[1].item
-			elif event.keycode == KEY_3:
-				selected_item = inventory[2].item
+			
+func _input(event):	
+	selected_item = inventory[0].item
+			
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT and selected_item:
 			if cooldown_time > 0.5:

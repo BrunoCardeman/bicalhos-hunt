@@ -4,13 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://b6fv3gexyud0u" path="res://540/assets/WhatsApp Image 2026-05-26 at 15.52.57.jpeg" id="2_wwr1v"]
 [ext_resource type="Script" uid="uid://bg2lfcg8pppok" path="res://Top-down-Shooter/script/character_body_2d.gd" id="3_l3g1m"]
 [ext_resource type="Script" uid="uid://1b43aqlx8a4o" path="res://Top-down-Shooter/script/inventory_slot.gd" id="4_8b206"]
-[ext_resource type="Resource" uid="uid://cqg12hle1yqd8" path="res://resources/egg.tres" id="5_0crwf"]
+[ext_resource type="Script" uid="uid://b132b8h2g4nsf" path="res://Top-down-Shooter/script/inventory_item.gd" id="5_quv6i"]
 [ext_resource type="Resource" uid="uid://q50pujxqyuva" path="res://resources/apple.tres" id="6_lnjmx"]
+[ext_resource type="Texture2D" uid="uid://h7aou0l5yrse" path="res://Top-down-Shooter/assets/Gemini_Generated_Image_j7z173j7z173j7z1-removebg-preview.png" id="6_wwr1v"]
 [ext_resource type="Texture2D" uid="uid://c587l417mkha8" path="res://Top-down-Shooter/assets/Characters/Basic Charakter Spritesheet.png" id="7_j4hlj"]
+
+[sub_resource type="Resource" id="Resource_l3g1m"]
+script = ExtResource("5_quv6i")
+item_name = "Egg"
+sprite = ExtResource("6_wwr1v")
+metadata/_custom_type_script = "uid://b132b8h2g4nsf"
 
 [sub_resource type="Resource" id="Resource_j7wrs"]
 script = ExtResource("4_8b206")
-item = ExtResource("5_0crwf")
+item = SubResource("Resource_l3g1m")
 quantity = 3
 metadata/_custom_type_script = "uid://1b43aqlx8a4o"
 
@@ -197,12 +204,11 @@ texture_filter = 1
 position = Vector2(511, 517)
 texture = ExtResource("2_wwr1v")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438935043 node_paths=PackedStringArray("inventoryTileMap", "nota")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438935043 node_paths=PackedStringArray("nota")]
 position = Vector2(528, 632)
 scale = Vector2(3, 3)
 script = ExtResource("3_l3g1m")
 inventory = Array[ExtResource("4_8b206")]([SubResource("Resource_j7wrs"), null, SubResource("Resource_dubn7"), null, null, null, null])
-inventoryTileMap = NodePath("")
 nota = NodePath("../Control/Nota")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1655424958]

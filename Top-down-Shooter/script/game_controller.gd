@@ -1,7 +1,6 @@
 extends Node2D
 
 var chicken_scene = preload("res://Top-down-Shooter/scenes/chicken_enemy.tscn")
-var cow_scene = preload("res://Top-down-Shooter/scenes/cow_enemy.tscn")
 
 var spawn = true
 var spawn_timer = 0.0
@@ -19,7 +18,7 @@ var enemys
 func _ready():	
 	# Espera o jogo carregar completamente na tela antes de mudar o tamanho
 	# Inicializa seus inimigos
-	enemys = [chicken_scene, cow_scene]
+	enemys = [chicken_scene]
 	
 func spawn_enemy():
 	var random_x = 0
