@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
+@export var dialogue_resource: DialogueResource
 @export var inventory: Array[InventorySlot]
 @export var inventoryTileMap: TileMapLayer
-@export var life_label: Label
+@export var nota: Label
 
 var bullet_scene = preload("res://Top-down-Shooter/scenes/bullet.tscn")
 var nLife = 3
@@ -12,10 +13,20 @@ var direction_y = 0
 var cooldown_time = 0
 var last_direction: Vector2 = Vector2(1,0)
 const SPEED = 100.0
+var aceitou_missao = false
+
+func _on_dialogue_signal(signal_name):
+	if signal_name == "missao_aceita":
+		aceitou_missao = true
+
+func _on_dialogue_ended(_resource):
+	if aceitou_missao:
+		get_tree().change_scene_to_file("res://Top-down-Shooter/scenes/BossFigth.tscn")
 
 
 func _ready():
-	
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	DialogueManager.mutated.connect(_on_dialogue_signal)
 	for i in range(inventory.size()):
 		var slot = inventory[i]
 		var slot_sprite = Sprite2D.new()
@@ -71,7 +82,20 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if not (area is bullet):
-		nLife-=1
-		if(nLife == 0): 
-			get_tree().change_scene_to_file("res://scenes/Lose.tscn")
+	if not (area is bullet) and not(area is professor)and not(area is porta):
+		GlobalData.nota = GlobalData.nota -1
+		print(GlobalData.nota)
+		nota.text = "Nota: "+str(GlobalData.nota)
+
+
+func _on_bicalio_area_entered(area: Area2D) -> void:
+	var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
+
+	await balloon.tree_exited
+
+	if GlobalData.ir_top_down == true:
+		get_tree().change_scene_to_file("res://Top-down-Shooter/scenes/BossFigth.tscn")
+
+
+func _on_porta_area_entered(area: Area2D) -> void:
+	get_tree().change_scene_to_file("res://map/scenes/mapa.tscn") # Replace with function body.

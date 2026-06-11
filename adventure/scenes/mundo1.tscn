@@ -4,7 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://5p6ypa3rjwti" path="res://adventure/assets/cenario.png" id="2_dj6dp"]
 [ext_resource type="PackedScene" uid="uid://c5hvp8chemsaa" path="res://frog-platformer/adventure/scenes/npc.tscn" id="2_ngo62"]
 [ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://frog-platformer/adventure/scenes/player.tscn" id="3_ngo62"]
-[ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://adventure/dialogues/npc1.dialogue" id="5_dj6dp"]
+[ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://frog-platformer/adventure/dialogues/npc1.dialogue" id="5_dj6dp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dj6dp"]
+size = Vector2(43.5, 45)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_pafas"]
 a = Vector2(672, 261)
@@ -40,6 +43,12 @@ texture = ExtResource("2_dj6dp")
 [node name="player" parent="." unique_id=382454701 instance=ExtResource("3_ngo62")]
 position = Vector2(-290, 476)
 motion_mode = 1
+
+[node name="Area2D" type="Area2D" parent="player" unique_id=2058131749]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Area2D" unique_id=1871217760]
+position = Vector2(576, 327)
+shape = SubResource("RectangleShape2D_dj6dp")
 
 [node name="npc" parent="." unique_id=728425066 instance=ExtResource("2_ngo62")]
 position = Vector2(943, 637)
@@ -92,9 +101,11 @@ position = Vector2(868, 913)
 position = Vector2(-32.5, -35.5)
 shape = SubResource("RectangleShape2D_hqcf4")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1619801304]
+[node name="Porta" type="Area2D" parent="." unique_id=1327111977]
 position = Vector2(-74, 929)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1587445214]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta" unique_id=1587445214]
 position = Vector2(12, -229)
 shape = SubResource("RectangleShape2D_hd4h2")
+
+[connection signal="area_entered" from="Porta" to="player" method="_on_porta_area_entered"]

@@ -10,7 +10,7 @@ var sono: float = 0.0  # Vai de 0 a 100
 
 # --- Sistema de Reputação ---
 var reputacao: int = 0 # Começa em 0, vai de -10 a +10
-
+var nota:int = 10
 # --- Recursos e Inventário ---
 var moedas: int = 0
 var inventario: Array = []
@@ -24,10 +24,12 @@ var pc_vermelho_pecas: int = 0
 var jogou_minigame_snake: bool = false
 var jogou_minigame_labgrad: bool = false
 var jogou_minigame_di: bool = false
+var jogou_minigame_540: bool = false
 
 # --- Controle de transição de cenas ---
 var ir_para_snake: bool = false       # true só quando o jogador aceitar jogar/rejogar o Snake
 var falou_com_vivi_snake: bool = false # true depois que ouviu o diálogo completo da Vivi
+var ir_top_down : bool = false
 
 
 # ==========================================

@@ -1,0 +1,12 @@
+~ start
+Bicalho: Finalmente vc chegou, demorou muito para chegar aqui.
+Aluno: Claro que, demorei, o bicicletaria e longe pra caramba
+Bicalho: Bom, não tem problema, o ivan falou que vc ta precisando de nota.
+Aluno: To, as classes em P.O.O estao acabando comigo.
+Bicalho: Estou aqui a muito tempo travado em um problema de virus. Se conseguir me ajuda com isso eu te xp extra para passar na materia
+- Ajuda o Bicalho
+	set GlobalData.ir_top_down = true
+	Aluno: Claro quero me formar.
+- Desistir
+	Aluno: Não, to bem. SuperCopa ta vindo ai. prefiro focar nela.
+=> END

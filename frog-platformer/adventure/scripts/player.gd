@@ -22,3 +22,7 @@ func _physics_process(delta):
 
 	velocity = direction.normalized() * SPEED
 	move_and_slide()
+
+
+func _on_porta_area_entered(area: Area2D) -> void:
+	get_tree().change_scene_to_file("res://map/scenes/mapa.tscn")# Replace with function body.

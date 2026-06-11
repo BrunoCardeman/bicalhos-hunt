@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c2ybf3gbcgvd"
+path="res://.godot/imported/Bicalho.dialogue-7e5a77b4445ad572f725ecd42e0fd76f.tres"
+
+[deps]
+
+source_file="res://540/Dialogo/Bicalho.dialogue"
+dest_files=["res://.godot/imported/Bicalho.dialogue-7e5a77b4445ad572f725ecd42e0fd76f.tres"]
+
+[params]
+
+defaults=true

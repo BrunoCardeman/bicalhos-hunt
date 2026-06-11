@@ -65,28 +65,35 @@ func update_difficulty():
 	print(nPoints)
 	spawn_time = max(0.5, 3.0 - (nPoints * 0.1))
 
+var terminou_fase = false
+
 func _process(delta: float) -> void:
 
-	if enemy_count >= 45 and Nround == 3:
+	if !terminou_fase and enemy_count >= 45 and Nround == 3:
+		terminou_fase = true
 		spawn = false
-		#if GameController.nPoints >= 30:
-	#		spawn_time = 0.5
-	#		update_Round(30,0.5)
-		print("Ganhou")
+
+		GlobalData.jogou_minigame_540 = true
+		GlobalData.ir_top_down = false
+
+		get_tree().change_scene_to_file("res://540/scenes/540.tscn")
+		return
+
 	elif enemy_count >= 25 and Nround == 2:
 		spawn = false
 		if GameController.nPoints >= 25:
 			spawn_time = 1.0
-			update_Round(25,1)
+			update_Round(25, 1)
+
 	elif enemy_count == 10 and Nround == 1:
 		spawn = false
 		if GameController.nPoints >= 10:
 			spawn_time = 2
-			update_Round(10,2)
+			update_Round(10, 2)
 
 	spawn_timer += delta
 
 	if spawn_timer >= spawn_time:
-		if(spawn == true):
+		if spawn:
 			spawn_enemy()
 		spawn_timer = 0
