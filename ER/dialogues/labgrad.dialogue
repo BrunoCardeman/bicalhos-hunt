@@ -1,0 +1,106 @@
+using GlobalData
+
+~ entrada_labgrad
+
+VIVI: Ei, aluno! Você chegou bem na hora!
+ALUNO: O que aconteceu por aqui?
+VIVI: O LabGrad está cheio de peças espalhadas pelo caminho.
+VIVI: Placas-mãe, GPUs, processadores, fontes e memórias RAM!
+ALUNO: Peças de computador?
+VIVI: Isso mesmo! Com elas, você pode montar computadores completos.
+VIVI: Cada computador montado pode ser levado até o TecGraf e trocado por dinheiro.
+ALUNO: Dinheiro? Agora você falou minha língua.
+VIVI: Você vai precisar dele. A jornada universitária é longa, e aluno com fome não rende!
+VIVI: Peças azuis montam o PC Azul, que vale R$300.
+VIVI: Peças amarelas montam o PC Amarelo, que vale R$500.
+VIVI: Peças vermelhas montam o PC Vermelho, que vale R$700.
+ALUNO: Entendi. Quanto melhor o computador, maior o salário!
+VIVI: Exato! Pule os obstáculos, agache quando precisar e colete o máximo de peças que conseguir!
+
+- Estou pronto para começar!
+	VIVI: Boa! Mostre que você é aluno raiz da Computação!
+	set falou_com_vivi_labgrad = true
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Pode repetir o objetivo?
+	=> objetivo_labgrad
+
+- Melhor eu voltar depois.
+	VIVI: Tudo bem! Mas lembre-se: barriga vazia não passa de período!
+	set falou_com_vivi_labgrad = true
+	=> END
+
+
+~ perguntar_de_novo
+
+VIVI: E aí, aluno? Pronto para entrar no LabGrad?
+
+- Estou pronto para começar!
+	VIVI: Boa! Mostre que você é aluno raiz da Computação!
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Pode repetir o objetivo?
+	=> objetivo_labgrad
+
+- Melhor eu voltar depois.
+	VIVI: Tudo bem! Mas lembre-se: barriga vazia não passa de período!
+	=> END
+
+
+~ objetivo_labgrad
+
+VIVI: Claro! Colete peças de computador durante a corrida.
+VIVI: Cada cor monta um PC diferente.
+VIVI: Peças azuis montam o PC Azul, que vale R$300.
+VIVI: Peças amarelas montam o PC Amarelo, que vale R$500.
+VIVI: Peças vermelhas montam o PC Vermelho, que vale R$700.
+VIVI: Depois leve os computadores ao TecGraf para trocar por dinheiro.
+
+- Estou pronto para começar!
+	VIVI: Boa! Mostre que você é aluno raiz da Computação!
+	set falou_com_vivi_labgrad = true
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Pode repetir o objetivo?
+	=> objetivo_labgrad
+
+- Melhor eu voltar depois.
+	VIVI: Tudo bem! Mas lembre-se: barriga vazia não passa de período!
+	set falou_com_vivi_labgrad = true
+	=> END
+
+
+~ saida_labgrad
+
+VIVI: Ufa! Boa corrida, aluno!
+ALUNO: Foi puxado... esse LabGrad não brinca.
+VIVI: Veja quantas peças você conseguiu de cada cor.
+VIVI: Quando completar um computador, leve até o TecGraf.
+ALUNO: E lá eu troco por dinheiro, certo?
+VIVI: Isso! Continue coletando quando precisar.
+VIVI: O LabGrad sempre terá trabalho para um bom aluno.
+
+if tem_computador_montado():
+	VIVI: Ei! Parece que você já tem computador pronto para entregar!
+	ALUNO: Então é hora de ir ao TecGraf.
+	VIVI: Vá até o TecGraf no mapa da PUC-Rio e troque seu trabalho por dinheiro!
+else:
+	VIVI: Você ainda não completou nenhum computador.
+	VIVI: Continue tentando! Cada peça conta.
+
+VIVI: Quer tentar mais uma corrida ou sair do LabGrad?
+
+- Jogar novamente
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Sair
+	VIVI: Tudo bem! Até mais, aluno!
+	=> END

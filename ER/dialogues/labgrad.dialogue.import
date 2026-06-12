@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://rb3b7kwd4syl"
+path="res://.godot/imported/labgrad.dialogue-567cd0027060ad32afb2dd1e2fc2c781.tres"
+
+[deps]
+
+source_file="res://ER/dialogues/labgrad.dialogue"
+dest_files=["res://.godot/imported/labgrad.dialogue-567cd0027060ad32afb2dd1e2fc2c781.tres"]
+
+[params]
+
+defaults=true

@@ -124,6 +124,7 @@ text = "RDC"
 [node name="LABGRAD" type="Area2D" parent="." unique_id=1606862345]
 position = Vector2(806, 98)
 script = ExtResource("2_ofv12")
+caminho = "res://ER/scenes/rpg_labgrad.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="LABGRAD" unique_id=910039919]
 scale = Vector2(0.14453125, 0.14453125)

@@ -54,7 +54,7 @@ DOWM={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialog_tutorial.dialogue", "res://dialog_vivi.dialogue", "res://frog-platformer/adventure/dialogues/enemy1.dialogue", "res://frog-platformer/adventure/dialogues/enemy2.dialogue", "res://frog-platformer/adventure/dialogues/npc1.dialogue", "res://adventure/dialogues/npc1.dialogue", "res://adventure/adventure/dialogues/enemy1.dialogue", "res://adventure/adventure/dialogues/enemy2.dialogue", "res://adventure/adventure/dialogues/npc1.dialogue", "res://540/Dialogo/Bicalho.dialogue", "res://Bicalho_Fim.dialogue")
+locale/translations_pot_files=PackedStringArray("res://ER/dialogues/labgrad.dialogue", "res://540/Dialogo/Bicalho.dialogue", "res://adventure/adventure/dialogues/enemy1.dialogue", "res://adventure/adventure/dialogues/enemy2.dialogue", "res://adventure/adventure/dialogues/npc1.dialogue", "res://adventure/dialogues/npc1.dialogue", "res://Bicalho_Fim.dialogue", "res://dialog_tutorial.dialogue", "res://dialog_vivi.dialogue", "res://frog-platformer/adventure/dialogues/enemy1.dialogue", "res://frog-platformer/adventure/dialogues/enemy2.dialogue", "res://frog-platformer/adventure/dialogues/npc1.dialogue")
 
 [physics]
 

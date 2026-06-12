@@ -31,6 +31,10 @@ var ir_para_snake: bool = false       # true só quando o jogador aceitar jogar/
 var falou_com_vivi_snake: bool = false # true depois que ouviu o diálogo completo da Vivi
 var ir_top_down : bool = false
 
+# Controle do fluxo RPG -> Endless Runner -> RPG
+var falou_com_vivi_labgrad: bool = false
+var voltou_do_labgrad: bool = false
+var iniciar_labgrad_direto: bool = false
 
 # ==========================================
 # FUNÇÕES GLOBAIS
@@ -53,3 +57,6 @@ func recuperar_sono(quantidade: float):
 func recuperar_fome(quantidade: float):
 	fome -= quantidade
 	fome = clamp(fome, 0.0, 100.0)
+	
+func tem_computador_montado() -> bool:
+	return pc_azul_pecas >= 5 or pc_amarelo_pecas >= 5 or pc_vermelho_pecas >= 5

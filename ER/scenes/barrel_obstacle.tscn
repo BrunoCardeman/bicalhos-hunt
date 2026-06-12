@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dwowr807obcvo"]
+
+[ext_resource type="Script" uid="uid://b3hvememrt22h" path="res://scenes/obstacle_controller.gd" id="1_ev4wt"]
+[ext_resource type="Texture2D" uid="uid://sdc1sq4l8caa" path="res://assets/img/obstacles/barrel.png" id="1_veanx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehreg"]
+size = Vector2(40.333336, 33.666668)
+
+[node name="BarrelObstacle" type="Area2D" unique_id=2098901258]
+scale = Vector2(3, 3)
+script = ExtResource("1_ev4wt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=217429655]
+position = Vector2(0, 14)
+scale = Vector2(0.060416028, 0.07490843)
+texture = ExtResource("1_veanx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1459796231]
+position = Vector2(-2.5, 14)
+scale = Vector2(1.074589, 1.0821955)
+shape = SubResource("RectangleShape2D_ehreg")

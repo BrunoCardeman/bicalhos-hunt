@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dky4vd3spqsta"]
+
+[ext_resource type="Script" uid="uid://b6ol52atikv5b" path="res://scenes/computer_collectible.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dafsfi1i1a8rc" path="res://assets/img/collectibles/motherboard_blue.png" id="2_tex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_item"]
+radius = 40.012497
+
+[node name="ComputerCollectible" type="Area2D" unique_id=1417991206]
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713743894]
+texture = ExtResource("2_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1403184978]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_item")
