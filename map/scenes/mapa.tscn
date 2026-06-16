@@ -13,7 +13,7 @@ bg_color = Color(0.004464825, 0.2971057, 0.4420487, 0.5529412)
 [node name="Mapa" type="Node2D" unique_id=998702350]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1064232987]
-position = Vector2(572.99994, 393.00003)
+position = Vector2(562, 398.00003)
 scale = Vector2(0.93623894, 0.92666566)
 texture = ExtResource("1_dcjh4")
 
@@ -98,7 +98,7 @@ text = "Sala 540"
 [node name="RDC" type="Area2D" parent="." unique_id=1099798630]
 position = Vector2(735, 89)
 script = ExtResource("2_ofv12")
-caminho = "res://rpg_plataformer/scenes/pre_platformer.tscn"
+caminho = "res://rdc/scenes/pre_platformer.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="RDC" unique_id=219073739]
 scale = Vector2(0.14453125, 0.14453125)
@@ -124,7 +124,7 @@ text = "RDC"
 [node name="LABGRAD" type="Area2D" parent="." unique_id=1606862345]
 position = Vector2(806, 98)
 script = ExtResource("2_ofv12")
-caminho = "res://ER/scenes/rpg_labgrad.tscn"
+caminho = "res://Labgrad/scenes/rpg_labgrad.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="LABGRAD" unique_id=910039919]
 scale = Vector2(0.14453125, 0.14453125)
@@ -175,7 +175,7 @@ text = "Ginasio"
 [node name="CorredoPUC" type="Area2D" parent="." unique_id=551657724]
 position = Vector2(364, 183)
 script = ExtResource("2_ofv12")
-caminho = "res://adventure/scenes/mundo1.tscn"
+caminho = "res://Corredor/scenes/mundo1.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="CorredoPUC" unique_id=399668660]
 scale = Vector2(0.14453125, 0.14453125)

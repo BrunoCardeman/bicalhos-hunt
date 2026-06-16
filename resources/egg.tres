@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://cqg12hle1yqd8"]
 
-[ext_resource type="Script" uid="uid://b132b8h2g4nsf" path="res://Top-down-Shooter/script/inventory_item.gd" id="1_qlo2x"]
-[ext_resource type="Texture2D" uid="uid://be84otetr6xm2" path="res://Top-down-Shooter/assets/Objects/Egg_item.png" id="2_2141i"]
+[ext_resource type="Script" uid="uid://b132b8h2g4nsf" path="res://Boss_fight/script/inventory_item.gd" id="1_qlo2x"]
+[ext_resource type="Texture2D" uid="uid://be84otetr6xm2" path="res://Boss_fight/assets/Objects/Egg_item.png" id="2_2141i"]
 
 [resource]
 script = ExtResource("1_qlo2x")

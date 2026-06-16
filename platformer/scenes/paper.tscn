@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyf1i6urojmnd"]
 
-[ext_resource type="Script" uid="uid://c3rsrkp4jlmg" path="res://scripts/collectable_controller.gd" id="1_vas6c"]
-[ext_resource type="Texture2D" uid="uid://d0syoootg8j00" path="res://assets/TopDownHouse_SmallItems.png" id="2_cbjgq"]
+[ext_resource type="Script" uid="uid://c3rsrkp4jlmg" path="res://platformer/scripts/collectable_controller.gd" id="1_vas6c"]
+[ext_resource type="Texture2D" uid="uid://d0syoootg8j00" path="res://platformer/assets/TopDownHouse_SmallItems.png" id="2_cbjgq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c1pb6"]
 

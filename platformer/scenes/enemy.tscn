@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcgsngugceotg"]
 
-[ext_resource type="Script" uid="uid://dk1of0tdl0cmd" path="res://scripts/enemy_controller.gd" id="1_epypp"]
-[ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://assets/Characters_V3_Colour.png" id="3_epypp"]
+[ext_resource type="Script" uid="uid://dk1of0tdl0cmd" path="res://platformer/scripts/enemy_controller.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://platformer/assets/Characters_V3_Colour.png" id="3_epypp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0h7mo"]
 atlas = ExtResource("3_epypp")

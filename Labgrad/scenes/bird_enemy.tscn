@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bkyvaptvubc46"]
+
+[ext_resource type="Script" uid="uid://b3hvememrt22h" path="res://Labgrad/scenes/obstacle_controller.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://da5fxub5pn1nv" path="res://Labgrad/assets/img/obstacles/Bird.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73c7o"]
+atlas = ExtResource("2")
+region = Rect2(0, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8h4e"]
+atlas = ExtResource("2")
+region = Rect2(271, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6077"]
+atlas = ExtResource("2")
+region = Rect2(542, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbd0b"]
+atlas = ExtResource("2")
+region = Rect2(813, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbu43"]
+atlas = ExtResource("2")
+region = Rect2(1084, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i4qp"]
+atlas = ExtResource("2")
+region = Rect2(1355, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mrbk"]
+atlas = ExtResource("2")
+region = Rect2(1626, 201, 271, 272)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fviyf"]
+atlas = ExtResource("2")
+region = Rect2(1897, 201, 271, 272)
+
+[sub_resource type="SpriteFrames" id="10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73c7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8h4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6077")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbd0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbu43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i4qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mrbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fviyf")
+}],
+"loop": true,
+"name": &"voar",
+"speed": 8.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kamfn"]
+load_path = "res://.godot/imported/Bird.png-2f7f028637803a2906ea8b2cbb03daa8.ctex"
+
+[sub_resource type="RectangleShape2D" id="11"]
+size = Vector2(18, 11)
+
+[node name="BirdEnemy" type="Area2D" unique_id=1133232766]
+scale = Vector2(2.7, 2.7)
+script = ExtResource("1")
+grupo_extra = "inimigo_aereo"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1011889370]
+scale = Vector2(0.11323888, 0.089947365)
+sprite_frames = SubResource("10")
+animation = &"voar"
+autoplay = "voar"
+frame_progress = 0.71386945
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1605079873]
+visible = false
+texture = SubResource("CompressedTexture2D_kamfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=796375554]
+shape = SubResource("11")
