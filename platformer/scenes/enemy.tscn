@@ -1,39 +1,81 @@
 [gd_scene format=3 uid="uid://bcgsngugceotg"]
 
 [ext_resource type="Script" uid="uid://dk1of0tdl0cmd" path="res://platformer/scripts/enemy_controller.gd" id="1_epypp"]
-[ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://platformer/assets/Characters_V3_Colour.png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://iwdsgnfqhhyk" path="res://Labgrad/assets/img/vivi npc.png" id="2_vxugb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0h7mo"]
-atlas = ExtResource("3_epypp")
-region = Rect2(32, 64, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxugb"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(1097, 240, 133, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
-atlas = ExtResource("3_epypp")
-region = Rect2(128, 64, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j6h7"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(964, 240, 133, 240)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2bti"]
-atlas = ExtResource("3_epypp")
-region = Rect2(144, 64, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_205pr"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(831, 240, 133, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_354a3"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(698, 240, 133, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro7m7"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(565, 240, 133, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bj4m"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(432, 240, 133, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5udvc"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(299, 240, 133, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y02t"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(166, 240, 133, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y21xo"]
+atlas = ExtResource("2_vxugb")
+region = Rect2(33, 240, 133, 240)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0h7mo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0h7mo")
+"texture": SubResource("AtlasTexture_vxugb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nr8wp")
+"texture": SubResource("AtlasTexture_2j6h7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d2bti")
+"texture": SubResource("AtlasTexture_205pr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_354a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro7m7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bj4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5udvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y02t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y21xo")
 }],
 "loop": true,
 "name": &"run",
-"speed": 14.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtcfe"]
-size = Vector2(26, 24)
+size = Vector2(33, 60)
 
 [node name="Node2D" type="Node2D" unique_id=1567395663]
 
@@ -43,12 +85,13 @@ collision_layer = 2
 script = ExtResource("1_epypp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy" unique_id=1116399256]
-position = Vector2(4, -4)
-scale = Vector2(1.7812502, 1.7187499)
+position = Vector2(2, -20)
+scale = Vector2(0.35508704, 0.34262776)
 sprite_frames = SubResource("SpriteFrames_0h7mo")
 animation = &"run"
 autoplay = "run"
+frame_progress = 0.74252415
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=621230650]
-position = Vector2(3, -5)
+position = Vector2(2.5, -21)
 shape = SubResource("RectangleShape2D_wtcfe")
