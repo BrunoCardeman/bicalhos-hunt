@@ -39,4 +39,4 @@ func _on_dialogue_finished(_resource):
 	dialogue_open = false
 	if GlobalData.ir_para_snake:
 		GlobalData.ir_para_snake = false
-		get_tree().change_scene_to_file("res://adventure/scenes/Main.tscn")
+		get_tree().change_scene_to_file("res://Corredor/scenes/Main.tscn")

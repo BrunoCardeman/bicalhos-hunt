@@ -32,11 +32,11 @@ const RPG_LABGRAD_SCENE := "res://ER/scenes/rpg_labgrad.tscn"
 @onready var label_pontuacao_final: Label = $CanvasLayer/GameOver/PainelGameOver/MargemGameOver/ConteudoGameOver/PontuacaoFinalLabel
 @onready var label_itens_finais: Label = $CanvasLayer/GameOver/PainelGameOver/MargemGameOver/ConteudoGameOver/MoedasFinaisLabel
 
-var cena_toco := preload("res://ER/scenes/stump_obstacle.tscn")
-var cena_pedra := preload("res://ER/scenes/rock_obstacle.tscn")
-var cena_barril := preload("res://ER/scenes/barrel_obstacle.tscn")
-var cena_passaro := preload("res://ER/scenes/bird_enemy.tscn")
-var cena_item := preload("res://ER/scenes/computer_collectible.tscn")
+var cena_toco := preload("res://Labgrad/scenes/stump_obstacle.tscn")
+var cena_pedra := preload("res://Labgrad/scenes/rock_obstacle.tscn")
+var cena_barril := preload("res://Labgrad/scenes/barrel_obstacle.tscn")
+var cena_passaro := preload("res://Labgrad/scenes/bird_enemy.tscn")
+var cena_item := preload("res://Labgrad/scenes/computer_collectible.tscn")
 
 var obstaculos_terrestres: Array[PackedScene] = []
 

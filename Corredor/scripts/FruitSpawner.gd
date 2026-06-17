@@ -9,7 +9,7 @@ const SPAWN_INTERVAL = 0.3
 
 enum ItemType { NOTA_BOA, NOTA_RUIM, MOEDA, PECA_PC, COLA_PROVA, PROVA_EM_BRANCO }
 
-const ICONS_TEXTURE = preload("res://adventure/assets/icons.png")
+const ICONS_TEXTURE = preload("res://Corredor/assets/icons.png")
 
 const ITEM_FRAMES = {
 	ItemType.MOEDA: 0,

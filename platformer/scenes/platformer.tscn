@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://gymtg42v2c8"]
 
 [ext_resource type="Texture2D" uid="uid://c1hpvadr5rfae" path="res://platformer/assets/TopDownHouse_FloorsAndWalls.png" id="1_txcic"]
-[ext_resource type="Texture2D" uid="uid://bg3auh0atokeu" path="res://platformer/assets/Gemini_Generated_Image_8p5ths8p5ths8p5t.png" id="2_v5gpo"]
-[ext_resource type="Texture2D" uid="uid://dqq6sx8f8grpd" path="res://platformer/assets/Gemini_Generated_Image_vfony8vfony8vfon.png" id="3_v4035"]
+[ext_resource type="Texture2D" uid="uid://dy1fr3yivqtw0" path="res://platformer/assets/plat1.png" id="2_hmg2w"]
+[ext_resource type="Texture2D" uid="uid://cye1bixvl07ck" path="res://platformer/assets/plat2.png" id="3_0m43i"]
 [ext_resource type="Script" uid="uid://cx2qfcj3evkub" path="res://platformer/scripts/player_controller.gd" id="4_6yj8j"]
 [ext_resource type="Texture2D" uid="uid://v2rayimbxsl3" path="res://platformer/assets/Characters_V3_Colour.png" id="5_qoqfw"]
 [ext_resource type="Texture2D" uid="uid://cacsihmk5a2a0" path="res://platformer/assets/Gemini_Generated_Image_iqlh18iqlh18iqlh.png" id="6_0fs5j"]
@@ -4283,14 +4283,14 @@ region_enabled = true
 region_rect = Rect2(0.9386139, 0.78772354, 60.46143, 50.92809)
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=752144864]
-position = Vector2(689.5, 447)
-scale = Vector2(1, 1.0755209)
-texture = ExtResource("2_v5gpo")
+position = Vector2(483.00003, 624)
+scale = Vector2(0.8581233, 1.1296734)
+texture = ExtResource("2_hmg2w")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1976814348]
 position = Vector2(2042.5, 447)
-scale = Vector2(1, 1.0755209)
-texture = ExtResource("3_v4035")
+scale = Vector2(0.9986968, 1.0755209)
+texture = ExtResource("3_0m43i")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1868172745 node_paths=PackedStringArray("sprite2d", "pointsUI", "vidasUI", "initialPosition", "background")]
 position = Vector2(93, 74.00003)

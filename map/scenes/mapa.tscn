@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bq58i1dqkch2f"]
 
-[ext_resource type="Texture2D" uid="uid://cqa4k6ced0rhy" path="res://map/asset/Mapa.jpeg" id="1_dcjh4"]
+[ext_resource type="Texture2D" uid="uid://nle3um0ktc37" path="res://map/asset/mapa.png" id="1_dcjh4"]
 [ext_resource type="Script" uid="uid://dwylwup41w3ly" path="res://map/script/Point.gd" id="2_ofv12"]
 [ext_resource type="Texture2D" uid="uid://do0iu3bipp3ta" path="res://map/asset/4467108.png" id="3_8ks2m"]
 

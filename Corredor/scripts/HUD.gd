@@ -162,4 +162,4 @@ func _build_inventory(pecas_pc: Array):
 		inventory_grid.add_child(slot)
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://scenes/mundo1.tscn")
+	get_tree().change_scene_to_file("res://Corredor/scenes/mundo1.tscn")

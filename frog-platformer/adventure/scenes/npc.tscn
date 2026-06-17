@@ -1,38 +1,17 @@
 [gd_scene format=3 uid="uid://c5hvp8chemsaa"]
 
-[ext_resource type="Script" uid="uid://cf8un5jamghva" path="res://Corredor/scripts/npc.gd" id="1_abqhh"]
-[ext_resource type="Texture2D" uid="uid://boygjm6i3pnqi" path="res://Corredor/assets/2x/Merchant_idle.png" id="2_abqhh"]
+[ext_resource type="Script" uid="uid://cf8un5jamghva" path="res://frog-platformer/adventure/scripts/npc.gd" id="1_abqhh"]
+[ext_resource type="Texture2D" uid="uid://iwdsgnfqhhyk" path="res://Labgrad/assets/img/vivi npc.png" id="2_se2ob"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nh2m4"]
-atlas = ExtResource("2_abqhh")
-region = Rect2(0, 0, 32, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_81ov2"]
+atlas = ExtResource("2_se2ob")
+region = Rect2(0, 0, 156, 250)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_abqhh"]
-atlas = ExtResource("2_abqhh")
-region = Rect2(32, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
-atlas = ExtResource("2_abqhh")
-region = Rect2(64, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
-atlas = ExtResource("2_abqhh")
-region = Rect2(96, 0, 32, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4wlns"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_gl53l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nh2m4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_abqhh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rv78h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7n8xq")
+"texture": SubResource("AtlasTexture_81ov2")
 }],
 "loop": true,
 "name": &"default",
@@ -48,8 +27,10 @@ size = Vector2(38.5, 44.5)
 [node name="npc" type="StaticBody2D" unique_id=728425066]
 script = ExtResource("1_abqhh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1318299923]
-sprite_frames = SubResource("SpriteFrames_4wlns")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1088889092]
+position = Vector2(-2.4, 21.599998)
+scale = Vector2(0.3829013, 0.33057907)
+sprite_frames = SubResource("SpriteFrames_gl53l")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2143543951]

@@ -1,7 +1,7 @@
 extends Node2D
 
-const LABGRAD_RUNNER_SCENE := "res://ER/scenes/main_scene.tscn"
-const LABGRAD_DIALOGUE := "res://ER/dialogues/labgrad.dialogue"
+const LABGRAD_RUNNER_SCENE := "res://Labgrad/scenes/main_scene.tscn"
+const LABGRAD_DIALOGUE := "res://Labgrad/dialogues/labgrad.dialogue"
 
 @onready var hint_label: Label = $NPC/HintLabel
 @onready var player: CharacterBody2D = $Player

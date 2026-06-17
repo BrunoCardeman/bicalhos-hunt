@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dy0pep33yxx3q" path="res://Labgrad/scripts/rpg_player.gd" id="2_player"]
 [ext_resource type="Texture2D" uid="uid://d15o6b0obi3p8" path="res://Labgrad/assets/img/labgrad.jpeg" id="3_bg"]
 [ext_resource type="Texture2D" uid="uid://b5cw3shuhm6j1" path="res://Labgrad/assets/img/SpriteSheet.png" id="4_hkbgp"]
-[ext_resource type="Texture2D" uid="uid://c3dvos1jx83we" path="res://Labgrad/assets/2x/Merchant_idle.png" id="5_npc_tex"]
+[ext_resource type="Texture2D" uid="uid://iwdsgnfqhhyk" path="res://Labgrad/assets/img/vivi npc.png" id="5_8aj1j"]
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="6_font"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkbgp"]
@@ -182,36 +182,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="Shape_player"]
 size = Vector2(34, 67.2)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_npc_0"]
-atlas = ExtResource("5_npc_tex")
-region = Rect2(0, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_npc_1"]
-atlas = ExtResource("5_npc_tex")
-region = Rect2(32, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_npc_2"]
-atlas = ExtResource("5_npc_tex")
-region = Rect2(64, 0, 32, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_npc_3"]
-atlas = ExtResource("5_npc_tex")
-region = Rect2(96, 0, 32, 48)
+[sub_resource type="AtlasTexture" id="AtlasTexture_81ov2"]
+atlas = ExtResource("5_8aj1j")
+region = Rect2(0, 0, 156, 250)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_npc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_npc_0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_npc_1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_npc_2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_npc_3")
+"texture": SubResource("AtlasTexture_81ov2")
 }],
 "loop": true,
 "name": &"default",
@@ -236,7 +215,7 @@ scale = Vector2(1.125, 1.125)
 texture = ExtResource("3_bg")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1212956730 groups=["player"]]
-position = Vector2(455, 470)
+position = Vector2(531, 471)
 scale = Vector2(2.5, 2.5)
 motion_mode = 1
 script = ExtResource("2_player")
@@ -274,7 +253,7 @@ scale = Vector2(2.5, 2.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC" unique_id=136059399]
 position = Vector2(-2.4, 21.599998)
-scale = Vector2(1.6247344, 1.3940454)
+scale = Vector2(0.3829013, 0.33057907)
 sprite_frames = SubResource("SpriteFrames_npc")
 autoplay = "default"
 
