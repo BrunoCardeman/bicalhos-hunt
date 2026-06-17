@@ -68,10 +68,10 @@ var terminou_fase = false
 
 func _process(delta: float) -> void:
 
-	if !terminou_fase and enemy_count >= 45 and Nround == 3:
+	if !terminou_fase and enemy_count >= 45 and Nround == 2:
 		terminou_fase = true
 		spawn = false
-
+		
 		GlobalData.jogou_minigame_540 = true
 		GlobalData.ir_top_down = false
 
@@ -81,7 +81,7 @@ func _process(delta: float) -> void:
 	elif enemy_count >= 25 and Nround == 2:
 		spawn = false
 		if GameController.nPoints >= 25:
-			spawn_time = 1.0
+			spawn_time = 1.5
 			update_Round(25, 1)
 
 	elif enemy_count == 10 and Nround == 1:

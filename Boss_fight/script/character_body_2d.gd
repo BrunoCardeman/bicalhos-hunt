@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var dialogue_resource: DialogueResource
+@export var dialogue_final: DialogueResource
 @export var inventory: Array[InventorySlot]
 @export var inventoryTileMap: TileMapLayer
 @export var nota: Label
@@ -35,34 +36,40 @@ func _ready():
 			slot_sprite.position.y = 8
 			slot_sprite.position.x = 16 * i + 6
 			
-func _input(event):	
-	selected_item = inventory[0].item
-			
-	if event is InputEventMouseButton:
-		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT and selected_item:
-			if cooldown_time > 0.5:
-				var bullet_obj = bullet_scene.instantiate()
-				var sprite = bullet_obj.get_node("Sprite2D")
-				sprite.texture = selected_item.sprite
-				
-				bullet_obj.position = global_position
-				
-				var dir = (get_global_mouse_position() - global_position).normalized()
-				bullet_obj.direction = dir
-			
-				get_parent().add_child(bullet_obj)
-				cooldown_time = 0
-				
+func _input(event):    
+	if inventory.size() > 0 and inventory[0] != null:
+		selected_item = inventory[0].item
+	else:
+		selected_item = null
+		
 func _physics_process(delta: float) -> void:
 	cooldown_time += delta
 	
+	# --- SISTEMA DE TIRO CORRIGIDO ---
+	# Checa se o botão esquerdo do mouse está sendo segurado (crie a ação "atirar" no Input Map apontando para o Mouse Left)
+	# Ou substitua por: Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and selected_item:
+		if cooldown_time >= 0.3: # Se o tempo passou, atira!
+			var bullet_obj = bullet_scene.instantiate()
+			var sprite = bullet_obj.get_node("Sprite2D")
+			sprite.texture = selected_item.sprite
+			
+			bullet_obj.position = global_position
+			
+			var dir = (get_global_mouse_position() - global_position).normalized()
+			bullet_obj.direction = dir
+		
+			get_parent().add_child(bullet_obj)
+			cooldown_time = 0.0 # Reseta o cooldown
+	
+	# --- MOVIMENTAÇÃO (Seu código original) ---
 	direction_x = Input.get_axis("LEFT", "RIGHT")
 	if direction_x:
 		velocity.x = direction_x * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	direction_y = Input.get_axis("UP", "DOWM")
+	direction_y = Input.get_axis("UP", "DOWM") # Nota: Seu código original está com "DOWM" escrito com M, mantive para não quebrar seus inputs!
 	if direction_y:
 		velocity.y = direction_y * SPEED
 	else:
@@ -82,9 +89,14 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_bicalio_area_entered(area: Area2D) -> void:
-	var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
+	if GlobalData.jogou_minigame_540 == true and GlobalData.nota>=6:
+		var balloon = DialogueManager.show_dialogue_balloon(dialogue_final, "start")
+		await balloon.tree_exited
+		get_tree().change_scene_to_file("res://Final/scenes/final_vivi.tscn")
 
-	await balloon.tree_exited
+	else:
+		var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
+		await balloon.tree_exited
 
 	if GlobalData.ir_top_down == true:
 		get_tree().change_scene_to_file("res://Boss_fight/scenes/BossFigth.tscn")

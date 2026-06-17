@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://dyqanblok312r"]
+
+[ext_resource type="Script" uid="uid://cu26sb2bgrnvm" path="res://scripts/vivi_dialogue_scene.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ctlm2a63000yq" path="res://assets/puc_ensolarada.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://d2cqc00emy0y6" path="res://assets/Sem título - 11 de junho de 2026 às 20.03.55.png" id="3_1f1up"]
+[ext_resource type="Texture2D" uid="uid://j3nnt5cvkltg" path="res://assets/vivi_sorrindo.png" id="3_vivi"]
+[ext_resource type="VideoStream" uid="uid://c42qfobj1jm8d" path="res://assets/video/comemorar.ogv" id="5_374cr"]
+[ext_resource type="VideoStream" uid="uid://731dya5ac3h0" path="res://assets/video/Fim.ogv" id="5_j5d51"]
+[ext_resource type="AudioStream" uid="uid://52vooj5u1hp5" path="res://assets/audio/victory-sound.ogg" id="5_omhap"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omhap"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0.8, 0.8, 0.8, 0.023529412)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_normal"]
+bg_color = Color(0.8, 0.42, 0.1, 0.88)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
+bg_color = Color(1, 0.58, 0.18, 0.95)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="FinalVivi" type="Control" unique_id=1196333840]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1984528307]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="WarmOverlay" type="ColorRect" parent="." unique_id=1669515630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.78, 0.32, 0.07)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=187008682]
+layout_mode = 1
+offset_left = -14.0
+offset_top = -8.0
+offset_right = 769.0
+offset_bottom = 515.0
+texture = ExtResource("3_1f1up")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Vivi" type="TextureRect" parent="." unique_id=769189868]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.61
+anchor_top = 0.08
+anchor_right = 1.0
+anchor_bottom = 0.96
+offset_left = -56.80005
+offset_top = -53.6
+offset_right = 1.0
+offset_bottom = 47.799988
+texture = ExtResource("3_vivi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogueBox" type="PanelContainer" parent="." unique_id=1476649849]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.62
+anchor_right = 0.72
+anchor_bottom = 0.94
+offset_left = 2.6000023
+offset_top = 29.600006
+offset_right = 331.99994
+offset_bottom = 29.600037
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_omhap")
+
+[node name="Margin" type="MarginContainer" parent="DialogueBox" unique_id=1253293911]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 18
+
+[node name="VBox" type="VBoxContainer" parent="DialogueBox/Margin" unique_id=1670245902]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NameLabel" type="Label" parent="DialogueBox/Margin/VBox" unique_id=32702658]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "VIVI"
+
+[node name="DialogueLabel" type="Label" parent="DialogueBox/Margin/VBox" unique_id=1184209099]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BottomRow" type="HBoxContainer" parent="DialogueBox/Margin/VBox" unique_id=1894942266]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="HintLabel" type="Label" parent="DialogueBox/Margin/VBox/BottomRow" unique_id=116847977]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 0.66)
+theme_override_font_sizes/font_size = 14
+text = "ENTER / ESPAÇO para avançar"
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="DialogueBox/Margin/VBox/BottomRow" unique_id=343249690]
+visible = false
+custom_minimum_size = Vector2(112, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_button_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+text = "Avançar"
+
+[node name="PreFinalVideo" type="VideoStreamPlayer" parent="." unique_id=779521026]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("5_374cr")
+expand = true
+
+[node name="FinalVideo" type="VideoStreamPlayer" parent="." unique_id=1573869064]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("5_j5d51")
+expand = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2002393535]
+stream = ExtResource("5_omhap")
