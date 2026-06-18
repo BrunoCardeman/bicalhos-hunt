@@ -54,7 +54,7 @@ DOWN={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://540/Dialogo/Bicalho.dialogue", "res://Bicalho_Fim.dialogue", "res://dialog_tutorial.dialogue", "res://dialog_vivi.dialogue", "res://frog-platformer/adventure/dialogues/enemy1.dialogue", "res://frog-platformer/adventure/dialogues/enemy2.dialogue", "res://frog-platformer/adventure/dialogues/npc1.dialogue", "res://Labgrad/dialogues/labgrad.dialogue", "res://Corredor/adventure/dialogues/enemy1.dialogue", "res://Corredor/adventure/dialogues/enemy2.dialogue", "res://Corredor/adventure/dialogues/npc1.dialogue", "res://Corredor/dialogues/npc1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://540/Dialogo/Bicalho.dialogue", "res://Bicalho_Fim.dialogue", "res://dialog_tutorial.dialogue", "res://dialog_vivi.dialogue", "res://Labgrad/dialogues/labgrad.dialogue", "res://Corredor/adventure/dialogues/enemy1.dialogue", "res://Corredor/adventure/dialogues/enemy2.dialogue", "res://Corredor/adventure/dialogues/npc1.dialogue", "res://Corredor/dialogues/npc1.dialogue", "res://npc1.dialogue")
 
 [physics]
 
