@@ -120,21 +120,9 @@ region = Rect2(161, 288, 23, 36)
 atlas = ExtResource("9_e6eml")
 region = Rect2(184, 288, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nam7"]
-atlas = ExtResource("9_e6eml")
-region = Rect2(184, 252, 23, 36)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7csl8"]
 atlas = ExtResource("9_e6eml")
 region = Rect2(0, 0, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2xtj"]
-atlas = ExtResource("9_e6eml")
-region = Rect2(184, 288, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxqhv"]
-atlas = ExtResource("9_e6eml")
-region = Rect2(23, 0, 23, 36)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g0skp"]
 animations = [{
@@ -204,16 +192,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2nam7")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_7csl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j2xtj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sxqhv")
 }],
 "loop": true,
 "name": &"stop",
@@ -232,7 +211,7 @@ scale = Vector2(0.88117653, 0.716927)
 texture = ExtResource("2_6v7tf")
 
 [node name="tutorial" type="Area2D" parent="." unique_id=315374969]
-position = Vector2(661, 282)
+position = Vector2(24.000061, 20.00003)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_qb7pf")
 
@@ -246,7 +225,7 @@ position = Vector2(-136.5, 324)
 shape = SubResource("RectangleShape2D_kdubu")
 
 [node name="vivi" type="Area2D" parent="." unique_id=2090377064]
-position = Vector2(758, 363.00003)
+position = Vector2(871, 481.00003)
 scale = Vector2(1.579, 1.5)
 script = ExtResource("7_1ariu")
 
@@ -268,7 +247,7 @@ position = Vector2(632.5, 627.5)
 shape = SubResource("RectangleShape2D_812cu")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=202257124 groups=["player"]]
-position = Vector2(856, 347)
+position = Vector2(856, 484)
 scale = Vector2(1.2716068, 1.2716068)
 motion_mode = 1
 script = ExtResource("8_pmpma")

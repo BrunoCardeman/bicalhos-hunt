@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c5hvp8chemsaa"]
+[gd_scene format=3 uid="uid://c8bcy7f6w2o43"]
 
 [ext_resource type="Script" uid="uid://cf8un5jamghva" path="res://frog-platformer/adventure/scripts/npc.gd" id="1_abqhh"]
 [ext_resource type="Texture2D" uid="uid://iwdsgnfqhhyk" path="res://Labgrad/assets/img/vivi npc.png" id="2_se2ob"]

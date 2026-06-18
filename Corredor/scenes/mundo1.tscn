@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bj4lgciabkux1"]
 
-[ext_resource type="Script" uid="uid://ciam1vhxqtbx" path="res://frog-platformer/adventure/scripts/global_data.gd" id="1_6idfd"]
+[ext_resource type="Script" uid="uid://ciam1vhxqtbx" path="res://global_data.gd" id="1_6idfd"]
 [ext_resource type="Texture2D" uid="uid://5p6ypa3rjwti" path="res://Corredor/assets/cenario.png" id="2_dj6dp"]
-[ext_resource type="PackedScene" uid="uid://c5hvp8chemsaa" path="res://frog-platformer/adventure/scenes/npc.tscn" id="2_ngo62"]
-[ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://frog-platformer/adventure/scenes/player.tscn" id="3_ngo62"]
-[ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://frog-platformer/adventure/dialogues/npc1.dialogue" id="5_dj6dp"]
+[ext_resource type="PackedScene" uid="uid://c5hvp8chemsaa" path="res://Corredor/scenes/npc.tscn" id="2_ngo62"]
+[ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://Corredor/scenes/player.tscn" id="3_ngo62"]
+[ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://npc1.dialogue" id="5_dj6dp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj6dp"]
 size = Vector2(43.5, 45)

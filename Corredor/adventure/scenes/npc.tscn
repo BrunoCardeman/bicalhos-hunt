@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c5hvp8chemsaa"]
+[gd_scene format=3 uid="uid://dtnh10wfgyww5"]
 
 [ext_resource type="Script" uid="uid://cf8un5jamghva" path="res://Corredor/scripts/npc.gd" id="1_abqhh"]
 [ext_resource type="Texture2D" uid="uid://boygjm6i3pnqi" path="res://Corredor/assets/2x/Merchant_idle.png" id="2_abqhh"]
