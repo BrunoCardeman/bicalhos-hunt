@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bekyqvpqa1hpd"]
+[gd_scene format=3 uid="uid://b20jh2tqtdd0i"]
 
 [ext_resource type="Script" uid="uid://beje4dx78v72l" path="res://frog-platformer/adventure/scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://b5cw3shuhm6j1" path="res://Labgrad/assets/img/SpriteSheet.png" id="2_qbb0n"]
