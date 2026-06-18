@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://c2ybf3gbcgvd" path="res://540/Dialogo/Bicalho.dialogue" id="3_aiwyf"]
 [ext_resource type="Script" uid="uid://1b43aqlx8a4o" path="res://Boss_fight/script/inventory_slot.gd" id="3_f1s8j"]
 [ext_resource type="Resource" uid="uid://cqg12hle1yqd8" path="res://resources/egg.tres" id="4_h1xtv"]
+[ext_resource type="Resource" uid="uid://df3dsyxkkfnij" path="res://540/Dialogo/AudioFinalJogo.dialogue" id="4_uoado"]
 [ext_resource type="Resource" uid="uid://q50pujxqyuva" path="res://resources/apple.tres" id="5_aiwyf"]
 [ext_resource type="Texture2D" uid="uid://b5cw3shuhm6j1" path="res://Labgrad/assets/img/SpriteSheet.png" id="7_aiwyf"]
 [ext_resource type="Script" uid="uid://bg56mysldhnbx" path="res://540/scenes/bicalio.gd" id="8_h1xtv"]
@@ -248,6 +249,7 @@ position = Vector2(753, 258)
 scale = Vector2(3, 3.4799976)
 script = ExtResource("2_0xbl4")
 dialogue_resource = ExtResource("3_aiwyf")
+dialogue_final = ExtResource("4_uoado")
 inventory = Array[ExtResource("3_f1s8j")]([SubResource("Resource_j7wrs"), null, SubResource("Resource_dubn7"), null, null, null, null])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=59655964]

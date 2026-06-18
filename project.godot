@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bicalhos_Hunt"
-run/main_scene="uid://cfrpgyhjh6d3h"
+run/main_scene="uid://dse0grat40nrs"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

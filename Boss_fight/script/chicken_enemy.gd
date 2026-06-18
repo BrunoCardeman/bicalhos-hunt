@@ -18,7 +18,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if "Bullet" in area.name:
-		GameController.nPoints+=1
-		points.text = "Points: "+ str(GameController.nPoints)
-		queue_free()
+	# Verifica se a área que entrou é do tipo da classe 'bullet'
+	if area is bullet:
+		GameController.nPoints += 1
+		if points != null:
+			points.text = "Points: " + str(GameController.nPoints)
+		
+		queue_free() # Inimigo morre instantaneamente com 1 tiro!

@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://dse0grat40nrs"]
+
+[ext_resource type="Script" uid="uid://di2e03nqyy224" path="res://Inicio/scripts/vivi_dialogue_scene.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://hknywgov5fjg" path="res://Inicio/assets/puc_sombria.png" id="2_bg"]
+[ext_resource type="VideoStream" uid="uid://b5qdaikdrrajo" path="res://Inicio/assets/videos/download.ogv" id="2_cg87d"]
+[ext_resource type="Texture2D" uid="uid://drgddj3spqy54" path="res://Inicio/assets/vivi_serio.png" id="3_vivi"]
+[ext_resource type="Texture2D" uid="uid://c6y2dvp08nphi" path="res://Inicio/assets/logo.png" id="4_wud4s"]
+[ext_resource type="AudioStream" uid="uid://bvi4ttk1qwu5s" path="res://Inicio/assets/audio/epic-sound.ogg" id="6_v31a7"]
+
+[node name="IntroVivi" type="Control" unique_id=1835627801]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+dialogue_file = "uid://g30fe37ccj41"
+next_scene_path = "uid://bq58i1dqkch2f"
+
+[node name="Background" type="TextureRect" parent="." unique_id=1049103827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=326565126]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.28)
+
+[node name="Vivi" type="TextureRect" parent="." unique_id=1493641889]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.61
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.93
+offset_left = -4.800049
+offset_top = 19.0
+offset_right = 1.1999512
+offset_bottom = 48.0
+texture = ExtResource("3_vivi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogueBox" type="PanelContainer" parent="." unique_id=690464529]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = -205.0
+offset_right = -42.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="DialogueBox" unique_id=630262358]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 14
+
+[node name="VBox" type="VBoxContainer" parent="DialogueBox/Margin" unique_id=196559020]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="DialogueBox/Margin/VBox" unique_id=1695704562]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "VIVI"
+
+[node name="DialogueLabel" type="Label" parent="DialogueBox/Margin/VBox" unique_id=1710670710]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+
+[node name="HintLabel" type="Label" parent="DialogueBox/Margin/VBox" unique_id=905890722]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "ENTER / ESPAÇO para avançar"
+horizontal_alignment = 2
+
+[node name="NextButton" type="Button" parent="DialogueBox/Margin/VBox" unique_id=1859371300]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_stretch_ratio = 0.0
+text = "Enter para avançar"
+
+[node name="logo" type="TextureRect" parent="." unique_id=1543924113]
+layout_mode = 0
+offset_left = 0.99999994
+offset_top = 10.0
+offset_right = 1673.0
+offset_bottom = 951.0
+scale = Vector2(0.4692271, 0.5226959)
+texture = ExtResource("4_wud4s")
+
+[node name="IntroVideo" type="VideoStreamPlayer" parent="." unique_id=1400322326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_cg87d")
+autoplay = true
+expand = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=502369064]
+stream = ExtResource("6_v31a7")
