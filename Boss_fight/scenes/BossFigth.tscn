@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://q50pujxqyuva" path="res://resources/apple.tres" id="6_lnjmx"]
 [ext_resource type="Texture2D" uid="uid://h7aou0l5yrse" path="res://Boss_fight/assets/Gemini_Generated_Image_j7z173j7z173j7z1-removebg-preview.png" id="6_wwr1v"]
 [ext_resource type="Texture2D" uid="uid://b5cw3shuhm6j1" path="res://Labgrad/assets/img/SpriteSheet.png" id="8_207dp"]
+[ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="9_r88sg"]
 
 [sub_resource type="Resource" id="Resource_l3g1m"]
 script = ExtResource("5_quv6i")
@@ -318,5 +319,18 @@ shape = SubResource("RectangleShape2D_hh0fu")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="BarreiraCentral" unique_id=780986205]
 position = Vector2(349.75, 422)
 shape = SubResource("ConcavePolygonShape2D_08kqv")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1756758852]
+visible = false
+
+[node name="ExitHintLabel" type="Label" parent="HUD" unique_id=1998060158]
+visible = false
+offset_left = 335.0
+offset_top = 733.0
+offset_right = 734.0
+offset_bottom = 756.0
+theme_override_fonts/font = ExtResource("9_r88sg")
+theme_override_font_sizes/font_size = 18
+text = "Pressione ESC para voltar ao mapa"
 
 [connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]

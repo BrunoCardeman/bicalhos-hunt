@@ -335,6 +335,17 @@ autowrap_mode = 3
 position = Vector2(-32.5, 444.5)
 shape = SubResource("RectangleShape2D_8pfew")
 
+[node name="HUD" type="CanvasLayer" parent="." unique_id=897508427]
+
+[node name="ExitHintLabel" type="Label" parent="HUD" unique_id=1471066929]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 284.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 18
+text = "Pressione ESC para voltar ao mapa"
+
 [connection signal="body_entered" from="NPC/InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="NPC/InteractionArea" to="." method="_on_interaction_area_body_exited"]
 [connection signal="area_entered" from="Area2D" to="Player" method="_on_area_2d_area_entered"]

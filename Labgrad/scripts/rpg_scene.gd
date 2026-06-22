@@ -2,6 +2,7 @@ extends Node2D
 
 const LABGRAD_RUNNER_SCENE := "res://Labgrad/scenes/main_scene.tscn"
 const LABGRAD_DIALOGUE := "res://Labgrad/dialogues/labgrad.dialogue"
+const MAPA_SCENE := "res://map/scenes/mapa.tscn"
 
 @onready var hint_label: Label = $NPC/HintLabel
 @onready var player: CharacterBody2D = $Player
@@ -34,11 +35,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if dialogue_open:
 		return
 
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().call_deferred("change_scene_to_file", MAPA_SCENE)
+		marcar_input_como_usado()
+		return
+
 	if not player_nearby:
 		return
 
 	if event.is_action_pressed("ui_accept"):
 		abrir_dialogo_entrada()
+		marcar_input_como_usado()
 		marcar_input_como_usado()
 
 func marcar_input_como_usado() -> void:

@@ -7,6 +7,6 @@ extends CharacterBody2D
 func _ready():
 	animated_sprite.play("run")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity.x = speed
 	move_and_slide()

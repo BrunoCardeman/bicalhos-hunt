@@ -29,15 +29,10 @@ func _on_mouse_exited() -> void:
 	balao.hide() # Esconde o balão
 	
 	# Nova função para detectar o clique dentro da área
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	# Verifica se o evento foi um clique do botão esquerdo do mouse
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		
-		# OPÇÃO A: Posição global (em relação ao mapa/mundo do jogo)
-		var posicao_global = event.global_position
-		
-		# OPÇÃO B: Posição local (em relação ao centro da sua Area2D)
-		var posicao_local = event.position
-		
-		# Printa as informações no console do Godot
-		get_tree().change_scene_to_file(caminho)
+		if caminho == "":
+			print("Este ponto do mapa ainda não tem caminho configurado: ", name)
+			return
+
+		get_tree().call_deferred("change_scene_to_file", caminho)

@@ -98,7 +98,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if gameController != null:
 			gameController.coletar_item(area)
 
-		area.queue_free()
+		area.call_deferred("queue_free")
 		atualizar_animacao()
 		return
 

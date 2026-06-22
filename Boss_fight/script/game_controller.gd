@@ -1,5 +1,7 @@
 extends Node2D
 
+const MAPA_SCENE := "res://map/scenes/mapa.tscn"
+
 var chicken_scene = preload("res://Boss_fight/scenes/chicken_enemy.tscn")
 
 var spawn = true
@@ -96,3 +98,9 @@ func _process(delta: float) -> void:
 		if spawn:
 			spawn_enemy()
 		spawn_timer = 0
+		
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().call_deferred("change_scene_to_file", MAPA_SCENE)
+		get_viewport().set_input_as_handled()
+		return

@@ -9,7 +9,7 @@ const CHAO_Y_OBSTACULO := 508.0
 const Y_PASSARO := 448.0
 const Y_ITEM_BAIXO := 442.0
 const Y_ITEM_ALTO := 372.0
-const RPG_LABGRAD_SCENE := "res://ER/scenes/rpg_labgrad.tscn"
+const RPG_LABGRAD_SCENE := "res://Labgrad/scenes/rpg_labgrad.tscn"
 
 @onready var player: CharacterBody2D = $Dinossaur
 @onready var camera: Camera2D = $Camera2D
@@ -275,7 +275,7 @@ func salvar_resultado_labgrad() -> void:
 
 
 func voltar_para_rpg() -> void:
-	get_tree().change_scene_to_file(RPG_LABGRAD_SCENE)
+	get_tree().call_deferred("change_scene_to_file", RPG_LABGRAD_SCENE)
 
 
 func reiniciar_jogo() -> void:
