@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	direction_y = Input.get_axis("UP", "DOWM") # Nota: Seu código original está com "DOWM" escrito com M, mantive para não quebrar seus inputs!
+	direction_y = Input.get_axis("UP", "DOWM") 
 	if direction_y:
 		velocity.y = direction_y * SPEED
 	else:

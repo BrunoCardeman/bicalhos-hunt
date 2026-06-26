@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://5p6ypa3rjwti" path="res://Corredor/assets/cenario.png" id="2_dj6dp"]
 [ext_resource type="PackedScene" uid="uid://c5hvp8chemsaa" path="res://Corredor/scenes/npc.tscn" id="2_ngo62"]
 [ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://Corredor/scenes/player.tscn" id="3_ngo62"]
-[ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://npc1.dialogue" id="5_dj6dp"]
+[ext_resource type="Script" uid="uid://dimmsm6u30exp" path="res://Corredor/scenes/porta.gd" id="4_7ivx2"]
+[ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://npc1.dialogue" id="5_d288p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj6dp"]
 size = Vector2(43.5, 45)
@@ -54,11 +55,6 @@ motion_mode = 1
 position = Vector2(576, 327)
 shape = SubResource("RectangleShape2D_dj6dp")
 
-[node name="npc" parent="." unique_id=728425066 instance=ExtResource("2_ngo62")]
-position = Vector2(1035, 660)
-scale = Vector2(2, 2)
-dialogue_resource = ExtResource("5_dj6dp")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2021916943]
 position = Vector2(93, 1157)
 
@@ -107,9 +103,10 @@ shape = SubResource("RectangleShape2D_hqcf4")
 
 [node name="Porta" type="Area2D" parent="." unique_id=1327111977]
 position = Vector2(-74, 929)
+script = ExtResource("4_7ivx2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta" unique_id=1587445214]
-position = Vector2(-3, -235)
+position = Vector2(40, -246)
 shape = SubResource("RectangleShape2D_hd4h2")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1454152093]
@@ -126,4 +123,9 @@ position = Vector2(868, 913)
 position = Vector2(29, -335)
 shape = SubResource("RectangleShape2D_hqcf4")
 
-[connection signal="area_entered" from="Porta" to="player" method="_on_porta_area_entered"]
+[node name="npc" parent="." unique_id=728425066 instance=ExtResource("2_ngo62")]
+position = Vector2(1025, 678)
+scale = Vector2(2, 2)
+dialogue_resource = ExtResource("5_d288p")
+
+[connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]
