@@ -60,3 +60,10 @@ func recuperar_fome(quantidade: float):
 	
 func tem_computador_montado() -> bool:
 	return pc_azul_pecas >= 5 or pc_amarelo_pecas >= 5 or pc_vermelho_pecas >= 5
+
+
+#Plataformer
+
+var voltou_do_platformer: bool = false
+var resultado_di: String = ""  # "venceu", "perdeu", "saiu"
+var falou_com_vivi_di: bool = false

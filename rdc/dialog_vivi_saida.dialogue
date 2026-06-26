@@ -1,0 +1,12 @@
+~ saida_venceu
+Vivi: Mandou bem! Você coletou todos os papéis. Agora está mais perto de encontrar o Bicalho!
+=> END
+
+~ saida_perdeu
+Vivi: Você perdeu todas as vidas… Sua reputação global caiu. Tente de novo e cuidado no caminho!
+set GlobalData.reputacao -= 1
+=> END
+
+~ saida_saiu
+Vivi: Você saiu vivo, mas ainda faltaram papéis. Cada papel pode trazer uma pista importante.
+=> END

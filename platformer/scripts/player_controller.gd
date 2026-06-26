@@ -84,15 +84,16 @@ func update_points():
 	pointsUI.text = "Points: " + str(points)
 	if points >= 100:
 		vencer_jogo()
-		
 func vencer_jogo():
-	print("Você Ganhou!")
-	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
-	
-func perder_jogo():
-	print("Você Perdeu!")
-	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
+	GlobalData.voltou_do_platformer = true
+	GlobalData.resultado_di = "venceu"
+	GlobalData.jogou_minigame_di = true
+	get_tree().change_scene_to_file("res://rdc/scenes/pre_platformer.tscn")
 
+func perder_jogo():
+	GlobalData.voltou_do_platformer = true
+	GlobalData.resultado_di = "perdeu"
+	get_tree().change_scene_to_file("res://rdc/scenes/pre_platformer.tscn")
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "enemy":
 		if self.velocity.y > 0 and self.global_position.y < body.global_position.y:
