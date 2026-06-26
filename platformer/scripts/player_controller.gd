@@ -39,10 +39,10 @@ func _physics_process(delta: float) -> void:
 		var dir_y = Input.get_axis("ui_up", "ui_down")
 		if dir_y:
 			self.velocity.y = dir_y * SPEED
-			sprite2d.animation = "run" # Temporário. Mude para a animação de escalar depois!
+			sprite2d.animation = "climb"
 		else:
 			self.velocity.y = 0 
-			sprite2d.animation = "idle" 
+			sprite2d.animation = "static_climb" 
 			
 		if Input.is_action_just_pressed("ui_accept"):
 			self.velocity.y = JUMP_VELOCITY
