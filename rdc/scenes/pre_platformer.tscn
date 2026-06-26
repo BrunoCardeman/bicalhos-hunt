@@ -2,31 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b11rdne04na7d" path="res://rdc/scripts/game_controller.gd" id="1_edecx"]
 [ext_resource type="Texture2D" uid="uid://cwqaefu8v7otj" path="res://rdc/assets/cenario rdc.png" id="2_6v7tf"]
-[ext_resource type="Script" uid="uid://bbe7fg1gmule3" path="res://rdc/scripts/tutorial_character.gd" id="5_qb7pf"]
 [ext_resource type="Texture2D" uid="uid://iwdsgnfqhhyk" path="res://Labgrad/assets/img/vivi npc.png" id="6_838rl"]
-[ext_resource type="Texture2D" uid="uid://bmrxvdk6vtuhi" path="res://rdc/assets/Characters_V3_Colour.png" id="6_yj7ko"]
 [ext_resource type="Script" uid="uid://bsv85eqskmi30" path="res://rdc/scripts/vivi.gd" id="7_1ariu"]
 [ext_resource type="Script" uid="uid://dy0pep33yxx3q" path="res://Labgrad/scripts/rpg_player.gd" id="8_pmpma"]
 [ext_resource type="Texture2D" uid="uid://b5cw3shuhm6j1" path="res://Labgrad/assets/img/SpriteSheet.png" id="9_e6eml"]
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="9_pmpma"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
-atlas = ExtResource("6_yj7ko")
-region = Rect2(0, 112, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rj586"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d21ai")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdubu"]
-size = Vector2(45, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_81ov2"]
 atlas = ExtResource("6_838rl")
@@ -279,20 +259,6 @@ position = Vector2(647.2564, 345.9333)
 scale = Vector2(0.88117653, 0.716927)
 texture = ExtResource("2_6v7tf")
 
-[node name="tutorial" type="Area2D" parent="." unique_id=315374969]
-position = Vector2(24.000061, 20.00003)
-scale = Vector2(0.8, 0.8)
-script = ExtResource("5_qb7pf")
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="tutorial" unique_id=1977357262]
-position = Vector2(-137, 321.99997)
-scale = Vector2(5.5625, 5.281248)
-sprite_frames = SubResource("SpriteFrames_rj586")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial" unique_id=1804997636]
-position = Vector2(-136.5, 324)
-shape = SubResource("RectangleShape2D_kdubu")
-
 [node name="vivi" type="Area2D" parent="." unique_id=2090377064]
 position = Vector2(871, 481.00003)
 scale = Vector2(1.579, 1.5)
@@ -358,5 +324,4 @@ theme_override_fonts/font = ExtResource("9_pmpma")
 theme_override_font_sizes/font_size = 18
 text = "Pressione ESC para voltar ao mapa"
 
-[connection signal="body_entered" from="tutorial" to="tutorial" method="_on_body_entered"]
 [connection signal="body_entered" from="vivi" to="vivi" method="_on_body_entered"]
