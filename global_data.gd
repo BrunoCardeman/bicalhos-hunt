@@ -63,7 +63,8 @@ func tem_computador_montado() -> bool:
 
 
 #Plataformer
-
+var pontos_di: int = 0
+var vidas_restantes_di: int = 0
 var voltou_do_platformer: bool = false
 var resultado_di: String = ""  # "venceu", "perdeu", "saiu"
 var falou_com_vivi_di: bool = false
