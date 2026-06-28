@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var inventory: Array[InventorySlot]
 @export var inventoryTileMap: TileMapLayer
 @export var nota: Label
+@export var animacao : AnimatedSprite2D
 
 var bullet_scene = preload("res://Boss_fight/scenes/bullet.tscn")
 var nLife = 3
@@ -63,17 +64,38 @@ func _physics_process(delta: float) -> void:
 			cooldown_time = 0.0 # Reseta o cooldown
 	
 	# --- MOVIMENTAÇÃO (Seu código original) ---
+	# 1. Primeiro, calculamos as velocidades (Movimentação)
 	direction_x = Input.get_axis("LEFT", "RIGHT")
 	if direction_x:
 		velocity.x = direction_x * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	direction_y = Input.get_axis("UP", "DOWM") 
+
+	direction_y = Input.get_axis("UP", "DOWN") 
 	if direction_y:
 		velocity.y = direction_y * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+
+	# 2. Depois, decidimos QUAL animação tocar baseada na velocidade atual
+	if velocity.length() > 0: # O personagem está se movendo?
+		
+		# Prioridade para o movimento horizontal
+		if direction_x != 0:
+			animacao.play("walk")
+			animacao.flip_h = (direction_x < 0)
+			
+		# Se não estiver se movendo de lado, checa o movimento vertical
+		elif direction_y != 0:
+			animacao.flip_h = false # Reseta o flip para não bugar a animação de cima/baixo
+			if direction_y < 0:
+				animacao.play("back")
+			else:
+				animacao.play("down")
+
+	else:
+		# Só toca o IDLE se o personagem estiver completamente parado
+		animacao.play("idle")
 	
 	if direction_x != 0 or direction_y != 0:
 		last_direction = Vector2(direction_x, direction_y)
