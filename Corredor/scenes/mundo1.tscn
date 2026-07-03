@@ -4,10 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://5p6ypa3rjwti" path="res://Corredor/assets/cenario.png" id="2_dj6dp"]
 [ext_resource type="PackedScene" uid="uid://c5hvp8chemsaa" path="res://Corredor/scenes/npc.tscn" id="2_ngo62"]
 [ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://Corredor/scenes/player.tscn" id="3_ngo62"]
-[ext_resource type="Script" uid="uid://dimmsm6u30exp" path="res://Corredor/scenes/porta.gd" id="4_7ivx2"]
+[ext_resource type="Script" path="res://Corredor/scenes/porta.gd" id="4_7ivx2"]
 [ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://npc1.dialogue" id="5_d288p"]
+
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="7_4nuu5"]
 [ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="8_bsfda"]
+[ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="7_yitnv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj6dp"]
 size = Vector2(43.5, 45)
@@ -48,7 +50,7 @@ texture = ExtResource("2_dj6dp")
 
 [node name="player" parent="." unique_id=382454701 instance=ExtResource("3_ngo62")]
 position = Vector2(-667, 229)
-scale = Vector2(1.87, 1.5)
+scale = Vector2(1.9908912, 1.5185345)
 motion_mode = 1
 
 [node name="Area2D" type="Area2D" parent="player" unique_id=2058131749]
@@ -140,5 +142,16 @@ theme_override_colors/font_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
 theme_override_fonts/font = ExtResource("7_4nuu5")
 theme_override_font_sizes/font_size = 20
 script = ExtResource("8_bsfda")
+
+[node name="ExitHintLabel" type="CanvasLayer" parent="." unique_id=521624433]
+
+[node name="Label" type="Label" parent="ExitHintLabel" unique_id=571383714]
+offset_left = 5.0
+offset_top = 28.0
+offset_right = 404.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("7_yitnv")
+theme_override_font_sizes/font_size = 18
+text = "Pressione ESC para voltar ao mapa"
 
 [connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]

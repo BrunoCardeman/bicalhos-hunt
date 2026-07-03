@@ -293,8 +293,21 @@ position = Vector2(513, 515.5)
 scale = Vector2(1.015625, 1.0400391)
 texture = ExtResource("1_uoado")
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1651606171]
+position = Vector2(513, 515.5)
+scale = Vector2(1.015625, 1.0400391)
+texture = ExtResource("1_uoado")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1892370679 node_paths=PackedStringArray("animacao", "hint_label")]
 position = Vector2(753, 258)
+scale = Vector2(3, 3.4799976)
+script = ExtResource("2_0xbl4")
+dialogue_resource = ExtResource("3_aiwyf")
+dialogue_final = ExtResource("4_uoado")
+inventory = Array[ExtResource("3_f1s8j")]([SubResource("Resource_j7wrs"), null, SubResource("Resource_dubn7"), null, null, null, null])
+animacao = NodePath("AnimatedSprite2D")
+hint_label = NodePath("../Bicalio/HintLabel")
+
 scale = Vector2(3, 3.4799976)
 script = ExtResource("2_0xbl4")
 dialogue_resource = ExtResource("3_aiwyf")

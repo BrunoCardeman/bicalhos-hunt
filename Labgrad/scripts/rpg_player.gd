@@ -8,37 +8,40 @@ const CHAO_Y := 480.0
 func _ready() -> void:
 	add_to_group("player")
 	position.y = CHAO_Y
-	
-	if sprite != null:
-		sprite.play("stop")
 
 func _physics_process(_delta: float) -> void:
-	var direcao := 0.0
+	var direction := Vector2.ZERO
 
 	if Input.is_action_pressed("ui_right"):
-		direcao += 1.0
-
+		direction.x += 1.0
 	if Input.is_action_pressed("ui_left"):
-		direcao -= 1.0
+		direction.x -= 1.0
+	if Input.is_action_pressed("ui_down"):
+		direction.y += 1.0
+	if Input.is_action_pressed("ui_up"):
+		direction.y -= 1.0
 
-	velocity.x = direcao * SPEED
-	velocity.y = 0.0
-	position.y = CHAO_Y
-
+	velocity = direction.normalized() * SPEED
 	move_and_slide()
-	atualizar_animacao(direcao)
 
-func atualizar_animacao(direcao: float) -> void:
+	atualizar_animacao(direction)
+
+func atualizar_animacao(direction: Vector2) -> void:
 	if sprite == null:
 		return
 
-	if direcao > 0.0:
-		sprite.play("default")	
-	elif direcao < 0.0:
-		sprite.play("back")
+	if direction != Vector2.ZERO:
+		if direction.x != 0.0:
+			sprite.play("walk")
+			sprite.flip_h = direction.x < 0.0
+		elif direction.y != 0.0:
+			sprite.flip_h = false
+			if direction.y < 0.0:
+				sprite.play("back")
+			else:
+				sprite.play("down")
 	else:
-		sprite.play("stop")
-
+		sprite.play("idle")
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	pass
