@@ -293,7 +293,7 @@ scale = Vector2(1.015625, 1.0400391)
 texture = ExtResource("1_uoado")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1892370679 node_paths=PackedStringArray("animacao")]
-position = Vector2(753, 258)
+position = Vector2(754, 258)
 scale = Vector2(3, 3.4799976)
 script = ExtResource("2_0xbl4")
 dialogue_resource = ExtResource("3_aiwyf")

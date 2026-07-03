@@ -103,26 +103,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if not (area is bullet) and not(area is professor)and not(area is porta):
-		GlobalData.nota = GlobalData.nota -1
-		print(GlobalData.nota)
-		nota.text = "Nota: "+str(GlobalData.nota)
-
-
-func _on_bicalio_area_entered(area: Area2D) -> void:
-	if GlobalData.jogou_minigame_540 == true and GlobalData.nota>=6:
-		var balloon = DialogueManager.show_dialogue_balloon(dialogue_final, "start")
-		await balloon.tree_exited
-		get_tree().change_scene_to_file("res://Final/scenes/final_vivi.tscn")
-
-	else:
-		var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
-		await balloon.tree_exited
-
-	if GlobalData.ir_top_down == true:
-		get_tree().change_scene_to_file("res://Boss_fight/scenes/BossFigth.tscn")
-
-
 func _on_porta_area_entered(area: Area2D) -> void:
 	get_tree().change_scene_to_file("res://map/scenes/mapa.tscn") # Replace with function body.
