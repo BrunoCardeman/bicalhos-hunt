@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://Corredor/scenes/player.tscn" id="3_ngo62"]
 [ext_resource type="Script" uid="uid://dimmsm6u30exp" path="res://Corredor/scenes/porta.gd" id="4_7ivx2"]
 [ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://npc1.dialogue" id="5_d288p"]
+[ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="7_4nuu5"]
+[ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="8_bsfda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dj6dp"]
 size = Vector2(43.5, 45)
@@ -127,5 +129,16 @@ shape = SubResource("RectangleShape2D_hqcf4")
 position = Vector2(1025, 678)
 scale = Vector2(2, 2)
 dialogue_resource = ExtResource("5_d288p")
+
+[node name="Reputacao" type="Label" parent="." unique_id=453760089]
+offset_left = 911.0
+offset_top = 325.0
+offset_right = 1310.0
+offset_bottom = 351.0
+scale = Vector2(0.99731135, 1.6631075)
+theme_override_colors/font_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+theme_override_fonts/font = ExtResource("7_4nuu5")
+theme_override_font_sizes/font_size = 20
+script = ExtResource("8_bsfda")
 
 [connection signal="body_entered" from="Porta" to="Porta" method="_on_body_entered"]

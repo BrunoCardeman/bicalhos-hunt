@@ -35,5 +35,5 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		if caminho == "":
 			print("Este ponto do mapa ainda não tem caminho configurado: ", name)
 			return
-	if GlobalData.jogou_minigame_di:
-		get_tree().call_deferred("change_scene_to_file", caminho)
+		if GlobalData.jogou_minigame_di:                          # <-- ISSO ESTÁ FORA DO IF DE CIMA!
+			get_tree().call_deferred("change_scene_to_file", caminho)

@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://do0iu3bipp3ta" path="res://map/asset/4467108.png" id="3_8ks2m"]
 [ext_resource type="Script" uid="uid://1cpn04xso316" path="res://map/scenes/rdc.gd" id="4_ofv12"]
 [ext_resource type="Script" uid="uid://d21kc4tpvnv0o" path="res://map/scenes/labgrad.gd" id="5_8ks2m"]
+[ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="7_m032u"]
+[ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="8_ajps0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d3jg"]
 size = Vector2(41, 58)
@@ -123,3 +125,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Corredor do Leme"
+
+[node name="Reputacao" type="Label" parent="." unique_id=1216924391]
+offset_left = 913.0
+offset_right = 1312.0
+offset_bottom = 26.0
+scale = Vector2(0.99731135, 1.6631075)
+theme_override_colors/font_color = Color(0.89145625, 0.89145625, 0.8914562, 1)
+theme_override_fonts/font = ExtResource("7_m032u")
+theme_override_font_sizes/font_size = 20
+script = ExtResource("8_ajps0")

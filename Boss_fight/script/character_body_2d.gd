@@ -6,7 +6,9 @@ extends CharacterBody2D
 @export var inventoryTileMap: TileMapLayer
 @export var nota: Label
 @export var animacao : AnimatedSprite2D
+@export var hint_label : Label
 
+var perto_do_professor := false
 var bullet_scene = preload("res://Boss_fight/scenes/bullet.tscn")
 var nLife = 3
 var selected_item = null
@@ -27,6 +29,7 @@ func _on_dialogue_ended(_resource):
 
 
 func _ready():
+	hint_label.visible = false
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	DialogueManager.mutated.connect(_on_dialogue_signal)
 	for i in range(inventory.size()):
@@ -111,18 +114,27 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_bicalio_area_entered(area: Area2D) -> void:
-	if GlobalData.jogou_minigame_540 == true and GlobalData.nota>=6:
+	hint_label.visible = true
+	perto_do_professor = true
+
+func _on_bicalio_area_exited(area: Area2D) -> void:
+	hint_label.visible = false
+	perto_do_professor = false
+
+func _unhandled_input(event: InputEvent) -> void:
+	if perto_do_professor and event.is_action_pressed("ui_accept"):
+		_iniciar_dialogo_professor()
+
+func _iniciar_dialogo_professor() -> void:
+	if GlobalData.jogou_minigame_540 == true and GlobalData.nota >= 6:
 		var balloon = DialogueManager.show_dialogue_balloon(dialogue_final, "start")
 		await balloon.tree_exited
 		get_tree().change_scene_to_file("res://Final/scenes/final_vivi.tscn")
-
 	else:
 		var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
 		await balloon.tree_exited
-
 	if GlobalData.ir_top_down == true:
 		get_tree().change_scene_to_file("res://Boss_fight/scenes/BossFigth.tscn")
-
 
 func _on_porta_area_entered(area: Area2D) -> void:
 	get_tree().change_scene_to_file("res://map/scenes/mapa.tscn") # Replace with function body.

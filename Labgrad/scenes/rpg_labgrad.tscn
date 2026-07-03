@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b5cw3shuhm6j1" path="res://Labgrad/assets/img/SpriteSheet.png" id="4_hkbgp"]
 [ext_resource type="Texture2D" uid="uid://iwdsgnfqhhyk" path="res://Labgrad/assets/img/vivi npc.png" id="5_8aj1j"]
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="6_font"]
+[ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="7_81ov2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkbgp"]
 atlas = ExtResource("4_hkbgp")
@@ -345,6 +346,17 @@ offset_bottom = 39.0
 theme_override_fonts/font = ExtResource("6_font")
 theme_override_font_sizes/font_size = 18
 text = "Pressione ESC para voltar ao mapa"
+
+[node name="Reputacao" type="Label" parent="." unique_id=2083129645]
+offset_left = 917.0
+offset_top = -1.0
+offset_right = 1316.0
+offset_bottom = 25.0
+scale = Vector2(0.99731135, 1.6631075)
+theme_override_colors/font_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 20
+script = ExtResource("7_81ov2")
 
 [connection signal="body_entered" from="NPC/InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="NPC/InteractionArea" to="." method="_on_interaction_area_body_exited"]

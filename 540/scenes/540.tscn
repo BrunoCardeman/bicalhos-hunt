@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bfx7vf5lmr06j" path="res://540/assets/bicalho npc.png" id="9_aiwyf"]
 [ext_resource type="Script" uid="uid://f276fc7wl3u5" path="res://540/scenes/porta.gd" id="11_uoado"]
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="12_y8yas"]
+[ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="13_5faqh"]
 
 [sub_resource type="Resource" id="Resource_j7wrs"]
 script = ExtResource("3_f1s8j")
@@ -292,7 +293,7 @@ position = Vector2(513, 515.5)
 scale = Vector2(1.015625, 1.0400391)
 texture = ExtResource("1_uoado")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1892370679 node_paths=PackedStringArray("animacao")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1892370679 node_paths=PackedStringArray("animacao", "hint_label")]
 position = Vector2(753, 258)
 scale = Vector2(3, 3.4799976)
 script = ExtResource("2_0xbl4")
@@ -300,6 +301,7 @@ dialogue_resource = ExtResource("3_aiwyf")
 dialogue_final = ExtResource("4_uoado")
 inventory = Array[ExtResource("3_f1s8j")]([SubResource("Resource_j7wrs"), null, SubResource("Resource_dubn7"), null, null, null, null])
 animacao = NodePath("AnimatedSprite2D")
+hint_label = NodePath("../Bicalio/HintLabel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=59655964]
 position = Vector2(-10.500092, -12.333336)
@@ -362,6 +364,17 @@ position = Vector2(-4, 13.194445)
 scale = Vector2(0.66712296, 0.66712296)
 sprite_frames = SubResource("SpriteFrames_aiwyf")
 
+[node name="HintLabel" type="Label" parent="Bicalio" unique_id=556644600]
+offset_left = -79.0
+offset_top = -77.77777
+offset_right = 58.0
+offset_bottom = -34.02778
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_y8yas")
+theme_override_font_sizes/font_size = 15
+text = "[ENTER] Falar"
+horizontal_alignment = 1
+
 [node name="Porta" type="Area2D" parent="." unique_id=737852887]
 script = ExtResource("11_uoado")
 
@@ -369,16 +382,28 @@ script = ExtResource("11_uoado")
 shape = SubResource("ConvexPolygonShape2D_aiwyf")
 
 [node name="Label" type="Label" parent="." unique_id=1866758319]
-offset_left = 18.0
-offset_top = 12.0
-offset_right = 417.0
-offset_bottom = 35.0
+offset_left = -12.0
+offset_top = -26.0
+offset_right = 387.0
+offset_bottom = -3.0
 scale = Vector2(0.99731135, 1.6631075)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_y8yas")
 theme_override_font_sizes/font_size = 18
 text = "Pressione ESC para voltar ao mapa"
 
+[node name="Reputacao" type="Label" parent="." unique_id=1245454065]
+offset_left = 807.0
+offset_top = -22.0
+offset_right = 1206.0
+offset_bottom = 4.0
+scale = Vector2(0.99731135, 1.6631075)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_y8yas")
+theme_override_font_sizes/font_size = 20
+script = ExtResource("13_5faqh")
+
 [connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Bicalio" to="CharacterBody2D" method="_on_bicalio_area_entered"]
+[connection signal="area_exited" from="Bicalio" to="CharacterBody2D" method="_on_bicalio_area_exited"]
 [connection signal="area_entered" from="Porta" to="CharacterBody2D" method="_on_porta_area_entered"]

@@ -42,3 +42,7 @@ func atualizar_animacao(direcao: float) -> void:
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	pass
+
+
+func _on_vivi_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
