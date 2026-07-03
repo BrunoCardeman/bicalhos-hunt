@@ -8,7 +8,7 @@ extends Area2D
 
 func _ready() -> void:
 	# Configura o texto do balão com o texto que você escolheu
-	
+
 	
 	# Garante que o balão comece escondido
 	balao.hide()

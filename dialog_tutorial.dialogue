@@ -1,0 +1,10 @@
+~ start
+
+Guia: Oi, você está procurando o DI?
+- Sim, estou meio perdido...
+	Guia: Vou te explicar tudo para você conseguir chegar lá e concluir sua missão, afinal ninguém se forma sozinho.
+	
+	=> END
+- Não, estou só dando uma volta.
+	Guia: Ah, tranquilo! Qualquer coisa, estou por aqui.
+	=> END

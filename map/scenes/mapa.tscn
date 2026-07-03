@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://bq58i1dqkch2f"]
 
 [ext_resource type="Texture2D" uid="uid://nle3um0ktc37" path="res://map/asset/mapa.png" id="1_dcjh4"]
-[ext_resource type="Script" uid="uid://buhde8q0xmggm" path="res://map/scenes/sala_540.gd" id="2_0lqbw"]
 [ext_resource type="Script" uid="uid://dwylwup41w3ly" path="res://map/script/Point.gd" id="2_ofv12"]
 [ext_resource type="Texture2D" uid="uid://do0iu3bipp3ta" path="res://map/asset/4467108.png" id="3_8ks2m"]
-[ext_resource type="Script" uid="uid://1cpn04xso316" path="res://map/scenes/rdc.gd" id="4_ofv12"]
-[ext_resource type="Script" uid="uid://d21kc4tpvnv0o" path="res://map/scenes/labgrad.gd" id="5_8ks2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d3jg"]
 size = Vector2(41, 58)
@@ -20,9 +17,61 @@ position = Vector2(562, 398.00003)
 scale = Vector2(0.93623894, 0.92666566)
 texture = ExtResource("1_dcjh4")
 
+[node name="Minhocão" type="Area2D" parent="." unique_id=1072881409]
+position = Vector2(134, 93)
+script = ExtResource("2_ofv12")
+
+[node name="Sprite2D" type="Sprite2D" parent="Minhocão" unique_id=1670722034]
+scale = Vector2(0.14453125, 0.14453125)
+texture = ExtResource("3_8ks2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Minhocão" unique_id=575682824]
+visible = false
+shape = SubResource("RectangleShape2D_5d3jg")
+
+[node name="Balao" type="PanelContainer" parent="Minhocão" unique_id=266901804]
+texture_filter = 1
+offset_left = 23.0
+offset_top = -87.0
+offset_right = 293.0
+offset_bottom = -12.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
+
+[node name="Label" type="Label" parent="Minhocão/Balao" unique_id=1890336922]
+layout_mode = 2
+text = "Minhocão
+ - Neste Local é possivel desncaçar 
+para recarregar as energias"
+
+[node name="Bandejão" type="Area2D" parent="." unique_id=1266816912]
+position = Vector2(361, 349)
+script = ExtResource("2_ofv12")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bandejão" unique_id=1300717238]
+scale = Vector2(0.14453125, 0.14453125)
+texture = ExtResource("3_8ks2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bandejão" unique_id=1705795433]
+visible = false
+shape = SubResource("RectangleShape2D_5d3jg")
+
+[node name="Balao" type="PanelContainer" parent="Bandejão" unique_id=232878307]
+texture_filter = 1
+offset_left = 23.0
+offset_top = -87.0
+offset_right = 293.0
+offset_bottom = -12.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
+
+[node name="Label" type="Label" parent="Bandejão/Balao" unique_id=852884919]
+layout_mode = 2
+text = "Bandejão
+ - Neste Local é possivel se alimentar 
+e comprar itens para recarregar as a fome"
+
 [node name="sala 540" type="Area2D" parent="." unique_id=328328015]
 position = Vector2(586, 117)
-script = ExtResource("2_0lqbw")
+script = ExtResource("2_ofv12")
 caminho = "res://540/scenes/540.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="sala 540" unique_id=1721702710]
@@ -48,7 +97,7 @@ text = "Sala 540"
 
 [node name="RDC" type="Area2D" parent="." unique_id=1099798630]
 position = Vector2(735, 89)
-script = ExtResource("4_ofv12")
+script = ExtResource("2_ofv12")
 caminho = "res://rdc/scenes/pre_platformer.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="RDC" unique_id=219073739]
@@ -74,7 +123,7 @@ text = "RDC"
 
 [node name="LABGRAD" type="Area2D" parent="." unique_id=1606862345]
 position = Vector2(806, 98)
-script = ExtResource("5_8ks2m")
+script = ExtResource("2_ofv12")
 caminho = "res://Labgrad/scenes/rpg_labgrad.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="LABGRAD" unique_id=910039919]
@@ -97,6 +146,31 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Labgrad"
+
+[node name="Ginasio" type="Area2D" parent="." unique_id=710368732]
+position = Vector2(133, 354)
+script = ExtResource("2_ofv12")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ginasio" unique_id=1869665072]
+scale = Vector2(0.14453125, 0.14453125)
+texture = ExtResource("3_8ks2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ginasio" unique_id=1150240237]
+visible = false
+shape = SubResource("RectangleShape2D_5d3jg")
+
+[node name="Balao" type="PanelContainer" parent="Ginasio" unique_id=1599899690]
+texture_filter = 1
+offset_left = 15.0
+offset_top = -77.0
+offset_right = 65.0
+offset_bottom = -27.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q8ihy")
+
+[node name="Label" type="Label" parent="Ginasio/Balao" unique_id=1623371737]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Ginasio"
 
 [node name="CorredoPUC" type="Area2D" parent="." unique_id=551657724]
 position = Vector2(364, 183)

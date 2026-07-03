@@ -87,6 +87,29 @@ theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
 theme_override_fonts/font = ExtResource("4_pu3yx")
 text = "Velocidade: 360"
 
+[node name="ReputacaoBox" type="HBoxContainer" parent="CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha" unique_id=39440575]
+layout_mode = 2
+alignment = 1
+
+[node name="ReputacaoLabel" type="Label" parent="CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/ReputacaoBox" unique_id=6729139]
+custom_minimum_size = Vector2(50, 24)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_pu3yx")
+theme_override_font_sizes/font_size = 18
+text = "Rep:
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReputacaoBar" type="ProgressBar" parent="CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/ReputacaoBox" unique_id=1968248576]
+custom_minimum_size = Vector2(200, 14)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8313076, 0.9830641, 0.99999994, 1)
+theme_override_colors/font_outline_color = Color(0.74291575, 0.40351596, 0.2716587, 1)
+max_value = 20.0
+value = 10.0
+show_percentage = false
+
 [node name="MenuInicial" type="Control" parent="CanvasLayer" unique_id=1853235612]
 layout_mode = 3
 anchors_preset = 15

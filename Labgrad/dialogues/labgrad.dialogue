@@ -33,6 +33,26 @@ VIVI: Exato! Pule os obstáculos, agache quando precisar e colete o máximo de p
 	=> END
 
 
+~ entrada_labgrad_decisoes
+
+VIVI: Então, aluno, o que você quer fazer?
+
+- Estou pronto para começar!
+	VIVI: Boa! Mostre que você é aluno raiz da Computação!
+	set falou_com_vivi_labgrad = true
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Pode repetir o objetivo?
+	=> objetivo_labgrad
+
+- Melhor eu voltar depois.
+	VIVI: Tudo bem! Mas lembre-se: barriga vazia não passa de período!
+	set falou_com_vivi_labgrad = true
+	=> END
+
+
 ~ perguntar_de_novo
 
 VIVI: E aí, aluno? Pronto para entrar no LabGrad?
@@ -76,6 +96,26 @@ VIVI: Depois leve os computadores ao TecGraf para trocar por dinheiro.
 	=> END
 
 
+~ objetivo_labgrad_decisoes
+
+VIVI: Resumindo: coletar peças, montar computadores e trocar no TecGraf. Vai encarar?
+
+- Estou pronto para começar!
+	VIVI: Boa! Mostre que você é aluno raiz da Computação!
+	set falou_com_vivi_labgrad = true
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Pode repetir o objetivo?
+	=> objetivo_labgrad
+
+- Melhor eu voltar depois.
+	VIVI: Tudo bem! Mas lembre-se: barriga vazia não passa de período!
+	set falou_com_vivi_labgrad = true
+	=> END
+
+
 ~ saida_labgrad
 
 VIVI: Ufa! Boa corrida, aluno!
@@ -93,6 +133,20 @@ if tem_computador_montado():
 else:
 	VIVI: Você ainda não completou nenhum computador.
 	VIVI: Continue tentando! Cada peça conta.
+
+VIVI: Quer tentar mais uma corrida ou sair do LabGrad?
+
+- Jogar novamente
+	set jogou_minigame_labgrad = true
+	set iniciar_labgrad_direto = true
+	=> END
+
+- Sair
+	VIVI: Tudo bem! Até mais, aluno!
+	=> END
+
+
+~ saida_labgrad_decisoes
 
 VIVI: Quer tentar mais uma corrida ou sair do LabGrad?
 

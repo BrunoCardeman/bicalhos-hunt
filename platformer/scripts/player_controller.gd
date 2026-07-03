@@ -39,10 +39,10 @@ func _physics_process(delta: float) -> void:
 		var dir_y = Input.get_axis("ui_up", "ui_down")
 		if dir_y:
 			self.velocity.y = dir_y * SPEED
-			sprite2d.animation = "climb"
+			sprite2d.animation = "run" # Temporário. Mude para a animação de escalar depois!
 		else:
 			self.velocity.y = 0 
-			sprite2d.animation = "static_climb" 
+			sprite2d.animation = "idle" 
 			
 		if Input.is_action_just_pressed("ui_accept"):
 			self.velocity.y = JUMP_VELOCITY
@@ -84,22 +84,14 @@ func update_points():
 	pointsUI.text = "Points: " + str(points)
 	if points >= 100:
 		vencer_jogo()
-
+		
 func vencer_jogo():
-	GlobalData.voltou_do_platformer = true
-	GlobalData.resultado_di = "venceu"
-	GlobalData.jogou_minigame_di = true
-	GlobalData.pontos_di = points
-	GlobalData.vidas_restantes_di = vidas
+	print("Você Ganhou!")
 	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
-
+	
 func perder_jogo():
-	GlobalData.voltou_do_platformer = true
-	GlobalData.resultado_di = "perdeu"
-	GlobalData.pontos_di = points
-	GlobalData.vidas_restantes_di = vidas
+	print("Você Perdeu!")
 	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "enemy":

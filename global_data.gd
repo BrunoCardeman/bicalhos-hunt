@@ -60,11 +60,28 @@ func recuperar_fome(quantidade: float):
 	
 func tem_computador_montado() -> bool:
 	return pc_azul_pecas >= 5 or pc_amarelo_pecas >= 5 or pc_vermelho_pecas >= 5
+	
+func registrar_pecas_labgrad(azuis: int, amarelas: int, vermelhas: int) -> void:
+	var pcs_azuis_antes := floori(pc_azul_pecas / 5.0)
+	var pcs_amarelos_antes := floori(pc_amarelo_pecas / 5.0)
+	var pcs_vermelhos_antes := floori(pc_vermelho_pecas / 5.0)
 
+	pc_azul_pecas += azuis
+	pc_amarelo_pecas += amarelas
+	pc_vermelho_pecas += vermelhas
 
-#Plataformer
-var pontos_di: int = 0
-var vidas_restantes_di: int = 0
-var voltou_do_platformer: bool = false
-var resultado_di: String = ""  # "venceu", "perdeu", "saiu"
-var falou_com_vivi_di: bool = false
+	var pcs_azuis_depois := floori(pc_azul_pecas / 5.0)
+	var pcs_amarelos_depois := floori(pc_amarelo_pecas / 5.0)
+	var pcs_vermelhos_depois := floori(pc_vermelho_pecas / 5.0)
+
+	var novos_pcs_azuis := pcs_azuis_depois - pcs_azuis_antes
+	var novos_pcs_amarelos := pcs_amarelos_depois - pcs_amarelos_antes
+	var novos_pcs_vermelhos := pcs_vermelhos_depois - pcs_vermelhos_antes
+
+	var ganho_reputacao := 0
+	ganho_reputacao += novos_pcs_azuis * 1
+	ganho_reputacao += novos_pcs_amarelos * 2
+	ganho_reputacao += novos_pcs_vermelhos * 3
+
+	if ganho_reputacao > 0:
+		alterar_reputacao(ganho_reputacao)

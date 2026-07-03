@@ -5,6 +5,15 @@ const VELOCIDADE_PULO := -860.0
 const POSICAO_Y_EM_PE := 500.0
 const DESLOCAMENTO_AGACHADO := 28.0
 
+# Ajustes visuais do personagem
+# Em pé: proporcional
+# Agachado: mais largo e mais achatado
+const ESCALA_SPRITE_EM_PE := Vector2(3.45, 3.45)
+const ESCALA_SPRITE_AGACHADO := Vector2(3.55, 2.32)
+
+const POSICAO_SPRITE_EM_PE := Vector2(0.0, -20.0)
+const POSICAO_SPRITE_AGACHADO := Vector2(0.0, -18.0)
+
 @export var gameController: Node2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -16,12 +25,16 @@ var morreu: bool = false
 var shape_em_pe := RectangleShape2D.new()
 var shape_agachado := RectangleShape2D.new()
 
+
 func _ready() -> void:
 	if gameController == null:
 		gameController = get_parent()
+
 	shape_em_pe.size = Vector2(32.0, 80.0)
 	shape_agachado.size = Vector2(45.0, 35.0)
+
 	resetar()
+
 
 func _physics_process(delta: float) -> void:
 	if gameController == null or not gameController.pode_processar_jogo():
@@ -51,20 +64,27 @@ func _physics_process(delta: float) -> void:
 
 	atualizar_animacao()
 
+
 func aplicar_postura(agachado: bool) -> void:
 	esta_agachado = agachado
 
 	if esta_agachado:
 		area_colisao.shape = shape_agachado
 		area_colisao.position = Vector2(0.0, -18.0)
-		sprite.scale.y = 1.0
+
+		sprite.scale = ESCALA_SPRITE_AGACHADO
+		sprite.position = POSICAO_SPRITE_AGACHADO
+
 		position.y = POSICAO_Y_EM_PE + DESLOCAMENTO_AGACHADO
 	else:
 		area_colisao.shape = shape_em_pe
 		area_colisao.position = Vector2(0.0, -10.0)
-		sprite.scale.y = 1.0
+
+		sprite.scale = ESCALA_SPRITE_EM_PE
+		sprite.position = POSICAO_SPRITE_EM_PE
+
 		position.y = POSICAO_Y_EM_PE
-		
+
 
 func atualizar_animacao() -> void:
 	if morreu:
@@ -83,12 +103,14 @@ func atualizar_animacao() -> void:
 		if sprite.animation != "default":
 			sprite.play("default")
 
+
 func resetar() -> void:
 	position = Vector2(140.0, POSICAO_Y_EM_PE)
 	velocidade_vertical = 0.0
 	morreu = false
 	aplicar_postura(false)
 	atualizar_animacao()
+
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if morreu:

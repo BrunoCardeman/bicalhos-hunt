@@ -2,22 +2,18 @@
 Bicalho: Finalmente vc chegou, demorou muito para chegar aqui.
 Aluno: Claro que, demorei, o bicicletaria e longe pra caramba
 Bicalho: Bom, não tem problema, o ivan falou que vc ta precisando de nota.
-if GlobalData.reputacao< 500:
-	Bicalho: Bom sua reputação esta muito baixa infelizmente n da para te ajuda 
-	Aluno: Vou tentar aumentar minha reputação e voltarei
-else:
-	Aluno: To, as classes em P.O.O estao acabando comigo.
-	Bicalho: Estou aqui a muito tempo travado em um problema de virus. Se conseguir me ajuda com isso eu te xp extra para passar na materia
-	if GlobalData.jogou_minigame_540 == true:
-		if GlobalData.nota>= 6:
-			Bicalho: Ah vc voltou. E parece que deu tudo certo ne, eu analisei vc fazendo e acho que da para te dar o xp extra.
-		else: 
-			Bicalho: Ate serviu o que voce fez mas acho que n vai ser o sufuciente. Infelizmente vou ter q te roprovar. Mas se quiser tentar de novo fica a vontade
-	if GlobalData.jogou_minigame_540 == false or GlobalData.nota< 6:
-		- Ajuda o Bicalho
-			set GlobalData.nota = 10
-			set GlobalData.ir_top_down = true
-			Aluno: Claro quero me formar.
-		- Desistir
-			Aluno: Não, to bem. SuperCopa ta vindo ai. prefiro focar nela.
+Aluno: To, as classes em P.O.O estao acabando comigo.
+Bicalho: Estou aqui a muito tempo travado em um problema de virus. Se conseguir me ajuda com isso eu te xp extra para passar na materia
+if GlobalData.jogou_minigame_540 == true:
+	if GlobalData.nota>= 6:
+		Bicalho: Ah vc voltou. E parece que deu tudo certo ne, eu analisei vc fazendo e acho que da para te dar o xp extra.
+	else: 
+		Bicalho: Ate serviu o que voce fez mas acho que n vai ser o sufuciente. Infelizmente vou ter q te roprovar. Mas se quiser tentar de novo fica a vontade
+if GlobalData.jogou_minigame_540 == false or GlobalData.nota< 6:
+	- Ajuda o Bicalho
+		set GlobalData.nota = 10
+		set GlobalData.ir_top_down = true
+		Aluno: Claro quero me formar.
+	- Desistir
+		Aluno: Não, to bem. SuperCopa ta vindo ai. prefiro focar nela.
 => END

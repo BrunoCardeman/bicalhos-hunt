@@ -5,7 +5,7 @@ extends Area2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 
-const TEXTURE_PATH := "res://assets/img/collectibles/%s_%s.png"
+const TEXTURE_PATH := "res://Labgrad/assets/img/collectibles/%s_%s.png"
 
 func _ready() -> void:
 	add_to_group("coletavel")
