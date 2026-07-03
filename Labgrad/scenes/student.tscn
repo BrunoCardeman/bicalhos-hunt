@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ouxil6eiwvus"]
+[gd_scene format=3 uid="uid://byokeoemmqga6"]
 
 [ext_resource type="Script" uid="uid://x1urabq8d4su" path="res://Labgrad/scripts/game_controller.gd" id="1_a44nb"]
 [ext_resource type="Texture2D" uid="uid://cmr72gbwjc5pa" path="res://Labgrad/assets/img/student.png" id="2_ndy7l"]

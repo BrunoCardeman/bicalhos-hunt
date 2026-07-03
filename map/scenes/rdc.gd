@@ -8,6 +8,8 @@ extends Area2D
 
 func _ready() -> void:
 	# Configura o texto do balão com o texto que você escolheu
+	if !GlobalData.jogou_minigame_snake:
+		modulate = Color(0.3, 0.3, 0.3, 1)
 	
 	
 	# Garante que o balão comece escondido
@@ -34,5 +36,5 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		if caminho == "":
 			print("Este ponto do mapa ainda não tem caminho configurado: ", name)
 			return
-
-		get_tree().call_deferred("change_scene_to_file", caminho)
+		if GlobalData.jogou_minigame_snake:
+			get_tree().call_deferred("change_scene_to_file", caminho)

@@ -19,7 +19,6 @@ repeat_size = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer1" unique_id=1202801057]
 modulate = Color(0.6789437, 0.6789437, 0.6789437, 1)
-position = Vector2(973.78345, 10.346417)
 texture = ExtResource("1_ut440")
 centered = false
 
@@ -28,8 +27,8 @@ scroll_scale = Vector2(0.3, 0.3)
 repeat_size = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer2" unique_id=1353085931]
-position = Vector2(-324, -18)
-scale = Vector2(0.8556856, 0.89273834)
+position = Vector2(-109.999985, -86)
+scale = Vector2(1.4071252, 1.0029781)
 texture = ExtResource("2_6qoia")
 centered = false
 
@@ -38,8 +37,8 @@ scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer4" unique_id=1224147719]
-position = Vector2(-99.999985, 29)
-scale = Vector2(0.928607, 0.8166893)
+position = Vector2(-341, -139)
+scale = Vector2(1.0311085, 1.1121434)
 texture = ExtResource("4_a2w78")
 centered = false
 

@@ -20,10 +20,6 @@ const RPG_LABGRAD_SCENE := "res://Labgrad/scenes/rpg_labgrad.tscn"
 @onready var label_amarelo: Label = $CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/AmareloLabel
 @onready var label_vermelho: Label = $CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/VermelhoLabel
 @onready var label_velocidade: Label = $CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/VelocidadeLabel
-@onready var label_reputacao: Label = $CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/ReputacaoBox/ReputacaoLabel
-@onready var barra_reputacao: ProgressBar = $CanvasLayer/HUD/PainelSuperior/MargemSuperior/InfoLinha/ReputacaoBox/ReputacaoBar
- 
-
 
 @onready var menu_inicial: Control = $CanvasLayer/MenuInicial
 @onready var painel_pausa: Control = $CanvasLayer/Pausa
@@ -272,9 +268,10 @@ func salvar_resultado_labgrad() -> void:
 
 	resultado_salvo = true
 
-	GlobalData.registrar_pecas_labgrad(pecas_azuis, pecas_amarelas, pecas_vermelhas)
+	GlobalData.pc_azul_pecas += pecas_azuis
+	GlobalData.pc_amarelo_pecas += pecas_amarelas
+	GlobalData.pc_vermelho_pecas += pecas_vermelhas
 	GlobalData.voltou_do_labgrad = true
-	print("Reputação atual: ", GlobalData.reputacao)
 
 
 func voltar_para_rpg() -> void:
@@ -323,9 +320,6 @@ func atualizar_hud() -> void:
 	label_amarelo.text = "Amarelo: %d" % pecas_amarelas
 	label_vermelho.text = "Vermelho: %d" % pecas_vermelhas
 	label_velocidade.text = "Velocidade: %d" % int(round(velocidade_atual))
-
-	label_reputacao.text = "Rep: %d" % GlobalData.reputacao
-	barra_reputacao.value = GlobalData.reputacao + 10
 
 
 func definir_proximo_intervalo() -> void:

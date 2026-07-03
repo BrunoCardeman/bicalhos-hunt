@@ -32,41 +32,81 @@ metadata/_custom_type_script = "uid://1b43aqlx8a4o"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3m5ht"]
 size = Vector2(22.000004, 39)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hkbgp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8yas"]
 atlas = ExtResource("8_207dp")
-region = Rect2(0, 252, 23, 36)
+region = Rect2(0, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_twcjd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5faqh"]
 atlas = ExtResource("8_207dp")
-region = Rect2(23, 252, 23, 36)
+region = Rect2(23, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ntt3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e705k"]
 atlas = ExtResource("8_207dp")
-region = Rect2(46, 252, 23, 36)
+region = Rect2(46, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hv2tu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5203"]
 atlas = ExtResource("8_207dp")
-region = Rect2(69, 252, 23, 36)
+region = Rect2(69, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m18ub"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt4s5"]
 atlas = ExtResource("8_207dp")
-region = Rect2(92, 252, 23, 36)
+region = Rect2(92, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pli28"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o3bm"]
 atlas = ExtResource("8_207dp")
-region = Rect2(115, 252, 23, 36)
+region = Rect2(115, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h68qc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbywg"]
 atlas = ExtResource("8_207dp")
-region = Rect2(138, 252, 23, 36)
+region = Rect2(138, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ifvpf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwgoe"]
 atlas = ExtResource("8_207dp")
-region = Rect2(161, 252, 23, 36)
+region = Rect2(161, 144, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_52nxu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpj7y"]
 atlas = ExtResource("8_207dp")
-region = Rect2(184, 252, 23, 36)
+region = Rect2(184, 144, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omfxd"]
+atlas = ExtResource("8_207dp")
+region = Rect2(0, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sjo2"]
+atlas = ExtResource("8_207dp")
+region = Rect2(23, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x7bp"]
+atlas = ExtResource("8_207dp")
+region = Rect2(46, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0aeog"]
+atlas = ExtResource("8_207dp")
+region = Rect2(69, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdhgb"]
+atlas = ExtResource("8_207dp")
+region = Rect2(92, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm4kp"]
+atlas = ExtResource("8_207dp")
+region = Rect2(115, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdr5f"]
+atlas = ExtResource("8_207dp")
+region = Rect2(138, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb67c"]
+atlas = ExtResource("8_207dp")
+region = Rect2(161, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx2m2"]
+atlas = ExtResource("8_207dp")
+region = Rect2(184, 0, 23, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7csl8"]
+atlas = ExtResource("8_207dp")
+region = Rect2(0, 0, 23, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d6ygq"]
 atlas = ExtResource("8_207dp")
@@ -104,55 +144,79 @@ region = Rect2(161, 288, 23, 36)
 atlas = ExtResource("8_207dp")
 region = Rect2(184, 288, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nam7"]
-atlas = ExtResource("8_207dp")
-region = Rect2(184, 252, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7csl8"]
-atlas = ExtResource("8_207dp")
-region = Rect2(0, 0, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2xtj"]
-atlas = ExtResource("8_207dp")
-region = Rect2(184, 288, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxqhv"]
-atlas = ExtResource("8_207dp")
-region = Rect2(23, 0, 23, 36)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_r88sg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hkbgp")
+"texture": SubResource("AtlasTexture_y8yas")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_twcjd")
+"texture": SubResource("AtlasTexture_5faqh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ntt3")
+"texture": SubResource("AtlasTexture_e705k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hv2tu")
+"texture": SubResource("AtlasTexture_q5203")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m18ub")
+"texture": SubResource("AtlasTexture_mt4s5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pli28")
+"texture": SubResource("AtlasTexture_6o3bm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h68qc")
+"texture": SubResource("AtlasTexture_hbywg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ifvpf")
+"texture": SubResource("AtlasTexture_rwgoe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_52nxu")
+"texture": SubResource("AtlasTexture_bpj7y")
 }],
 "loop": true,
 "name": &"back",
 "speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omfxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sjo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x7bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0aeog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdhgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm4kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdr5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb67c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx2m2")
+}],
+"loop": true,
+"name": &"down",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7csl8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -183,25 +247,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_dxl6r")
 }],
 "loop": true,
-"name": &"default",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2nam7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7csl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j2xtj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sxqhv")
-}],
-"loop": true,
-"name": &"stop",
-"speed": 6.0
+"name": &"walk",
+"speed": 13.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh0fu"]
@@ -231,12 +278,13 @@ texture_filter = 1
 position = Vector2(511, 517)
 texture = ExtResource("2_207dp")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438935043 node_paths=PackedStringArray("nota")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438935043 node_paths=PackedStringArray("nota", "animacao")]
 position = Vector2(528, 632)
 scale = Vector2(3, 3)
 script = ExtResource("3_l3g1m")
 inventory = Array[ExtResource("4_8b206")]([SubResource("Resource_j7wrs"), null, SubResource("Resource_dubn7"), null, null, null, null])
 nota = NodePath("../Control/Nota")
+animacao = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2107741973]
 shape = SubResource("RectangleShape2D_epypp")
@@ -247,12 +295,12 @@ shape = SubResource("RectangleShape2D_epypp")
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_3m5ht")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1841648831]
-position = Vector2(-0.99999714, -0.6666751)
-scale = Vector2(0.949299, 0.9975086)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=561618732]
+position = Vector2(-14.000008, -10.632191)
+scale = Vector2(1.024178, 1.0761904)
 sprite_frames = SubResource("SpriteFrames_r88sg")
-animation = &"stop"
-autoplay = "default"
+animation = &"down"
+autoplay = "idle"
 
 [node name="Control" type="Control" parent="." unique_id=1328185206]
 layout_mode = 3

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://be8pxan16ikfx"
+path="res://.godot/imported/dialog_vivi_saida.dialogue-3ac22ae483cb5df5d7ee908b2a045108.tres"
+
+[deps]
+
+source_file="res://rdc/dialog_vivi_saida.dialogue"
+dest_files=["res://.godot/imported/dialog_vivi_saida.dialogue-3ac22ae483cb5df5d7ee908b2a045108.tres"]
+
+[params]
+
+defaults=true

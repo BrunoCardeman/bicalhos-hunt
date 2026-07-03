@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ceu38k0e5hdyq" path="res://platformer/scripts/menu_platfomer.gd" id="1_twih5"]
 
-[node name="Control" type="Control" unique_id=1417130753]
+[node name="Control" type="Control" unique_id=1417130753 node_paths=PackedStringArray("label_resultado", "label_pontos", "label_vidas")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +10,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_twih5")
+label_resultado = NodePath("VBoxContainer/LabelResultado")
+label_pontos = NodePath("VBoxContainer/LabelPontos")
+label_vidas = NodePath("VBoxContainer/LabelVidas")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=591706923]
 layout_mode = 1
@@ -33,6 +36,15 @@ text = "Jogar Novamente"
 [node name="quit" type="Button" parent="VBoxContainer" unique_id=794427000]
 layout_mode = 2
 text = "Sair"
+
+[node name="LabelResultado" type="Label" parent="VBoxContainer" unique_id=1886648864]
+layout_mode = 2
+
+[node name="LabelVidas" type="Label" parent="VBoxContainer" unique_id=622257325]
+layout_mode = 2
+
+[node name="LabelPontos" type="Label" parent="VBoxContainer" unique_id=667822194]
+layout_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
