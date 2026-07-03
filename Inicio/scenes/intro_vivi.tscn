@@ -102,11 +102,11 @@ text = "Enter para avançar"
 
 [node name="logo" type="TextureRect" parent="." unique_id=1543924113]
 layout_mode = 0
-offset_left = 25.999998
-offset_top = 0.99999976
-offset_right = 1698.0
-offset_bottom = 942.0
-scale = Vector2(0.4069286, 0.48406768)
+offset_left = 0.99999994
+offset_top = 10.0
+offset_right = 1673.0
+offset_bottom = 951.0
+scale = Vector2(0.42783964, 0.47627413)
 texture = ExtResource("4_wud4s")
 
 [node name="IntroVideo" type="VideoStreamPlayer" parent="." unique_id=1400322326]
