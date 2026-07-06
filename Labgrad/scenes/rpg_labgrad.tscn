@@ -44,57 +44,41 @@ region = Rect2(161, 252, 23, 36)
 atlas = ExtResource("4_hkbgp")
 region = Rect2(184, 252, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d6ygq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3dmj"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(0, 288, 23, 36)
+region = Rect2(23, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v6262"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rusqg"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(23, 288, 23, 36)
+region = Rect2(46, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tndts"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk5ed"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(46, 288, 23, 36)
+region = Rect2(69, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0pflo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ernw"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(69, 288, 23, 36)
+region = Rect2(92, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywgfi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpy2e"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(92, 288, 23, 36)
+region = Rect2(115, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ee55q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cvxp"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(115, 288, 23, 36)
+region = Rect2(138, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wyn45"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_trvir"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(138, 288, 23, 36)
+region = Rect2(161, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qsfoc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s586t"]
 atlas = ExtResource("4_hkbgp")
-region = Rect2(161, 288, 23, 36)
+region = Rect2(184, 36, 23, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dxl6r"]
-atlas = ExtResource("4_hkbgp")
-region = Rect2(184, 288, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nam7"]
-atlas = ExtResource("4_hkbgp")
-region = Rect2(184, 252, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7csl8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ke3c"]
 atlas = ExtResource("4_hkbgp")
 region = Rect2(0, 0, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2xtj"]
-atlas = ExtResource("4_hkbgp")
-region = Rect2(184, 288, 23, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxqhv"]
-atlas = ExtResource("4_hkbgp")
-region = Rect2(23, 0, 23, 36)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
 animations = [{
@@ -132,52 +116,40 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d6ygq")
+"texture": SubResource("AtlasTexture_w3dmj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v6262")
+"texture": SubResource("AtlasTexture_rusqg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tndts")
+"texture": SubResource("AtlasTexture_bk5ed")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0pflo")
+"texture": SubResource("AtlasTexture_2ernw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ywgfi")
+"texture": SubResource("AtlasTexture_wpy2e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ee55q")
+"texture": SubResource("AtlasTexture_5cvxp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wyn45")
+"texture": SubResource("AtlasTexture_trvir")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qsfoc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dxl6r")
+"texture": SubResource("AtlasTexture_s586t")
 }],
 "loop": true,
-"name": &"default",
-"speed": 14.0
+"name": &"front",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2nam7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7csl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j2xtj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sxqhv")
+"texture": SubResource("AtlasTexture_7ke3c")
 }],
 "loop": true,
-"name": &"stop",
-"speed": 6.0
+"name": &"idle",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="Shape_player"]
@@ -205,7 +177,7 @@ size = Vector2(34, 44)
 size = Vector2(105.000015, 110.400024)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pfew"]
-size = Vector2(83, 389)
+size = Vector2(77.25, 616.1726)
 
 [node name="RpgLabgrad" type="Node2D" unique_id=1434743322]
 script = ExtResource("1_scene")
@@ -225,9 +197,9 @@ script = ExtResource("2_player")
 position = Vector2(-137.6, 25.599998)
 scale = Vector2(1.7418476, 1.8303064)
 sprite_frames = SubResource("SpriteFrames_player")
-animation = &"stop"
-autoplay = "default"
-frame_progress = 0.35425547
+animation = &"back"
+frame = 8
+frame_progress = 0.6679
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=157025797]
 position = Vector2(-136.4, 25.600006)
@@ -330,10 +302,16 @@ theme_override_fonts/font = ExtResource("6_font")
 theme_override_font_sizes/font_size = 20
 autowrap_mode = 3
 
-[node name="Area2D" type="Area2D" parent="." unique_id=766490823]
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=766490823]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=339516766]
 position = Vector2(-32.5, 444.5)
+shape = SubResource("RectangleShape2D_8pfew")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=775111916]
+physics_interpolation_mode = 1
+position = Vector2(310.91415, 409.6999)
+rotation = -1.5745991
 shape = SubResource("RectangleShape2D_8pfew")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=897508427]
@@ -360,4 +338,3 @@ script = ExtResource("7_81ov2")
 
 [connection signal="body_entered" from="NPC/InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="NPC/InteractionArea" to="." method="_on_interaction_area_body_exited"]
-[connection signal="area_entered" from="Area2D" to="Player" method="_on_area_2d_area_entered"]

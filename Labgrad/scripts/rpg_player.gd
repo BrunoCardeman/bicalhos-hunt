@@ -2,46 +2,43 @@ extends CharacterBody2D
 
 const SPEED := 180.0
 const CHAO_Y := 480.0
+const ANIM_FRONT := "front"
+const ANIM_BACK := "back"
+const ANIM_IDLE := "idle"
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	add_to_group("player")
 	position.y = CHAO_Y
+	atualizar_animacao(0.0)
 
 func _physics_process(_delta: float) -> void:
-	var direction := Vector2.ZERO
+	var direction_x := 0.0
 
-	if Input.is_action_pressed("ui_right"):
-		direction.x += 1.0
-	if Input.is_action_pressed("ui_left"):
-		direction.x -= 1.0
-	if Input.is_action_pressed("ui_down"):
-		direction.y += 1.0
-	if Input.is_action_pressed("ui_up"):
-		direction.y -= 1.0
+	if Input.is_action_pressed("RIGHT") or Input.is_action_pressed("ui_right"):
+		direction_x += 1.0
+	if Input.is_action_pressed("LEFT") or Input.is_action_pressed("ui_left"):
+		direction_x -= 1.0
 
-	velocity = direction.normalized() * SPEED
+	velocity = Vector2(direction_x * SPEED, 0.0)
 	move_and_slide()
+	position.y = CHAO_Y
 
-	atualizar_animacao(direction)
+	atualizar_animacao(direction_x)
 
-func atualizar_animacao(direction: Vector2) -> void:
+func atualizar_animacao(direction_x: float) -> void:
 	if sprite == null:
 		return
 
-	if direction != Vector2.ZERO:
-		if direction.x != 0.0:
-			sprite.play("walk")
-			sprite.flip_h = direction.x < 0.0
-		elif direction.y != 0.0:
-			sprite.flip_h = false
-			if direction.y < 0.0:
-				sprite.play("back")
-			else:
-				sprite.play("down")
+	sprite.flip_h = false
+
+	if direction_x > 0.0:
+		sprite.play(ANIM_FRONT)
+	elif direction_x < 0.0:
+		sprite.play(ANIM_BACK)
 	else:
-		sprite.play("idle")
+		sprite.play(ANIM_IDLE)
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	pass

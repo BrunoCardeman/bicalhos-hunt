@@ -61,6 +61,12 @@ func recuperar_fome(quantidade: float):
 func tem_computador_montado() -> bool:
 	return pc_azul_pecas >= 5 or pc_amarelo_pecas >= 5 or pc_vermelho_pecas >= 5
 
+func registrar_pecas_labgrad(azuis: int, amarelas: int, vermelhas: int) -> void:
+	pc_azul_pecas = clamp(pc_azul_pecas + azuis, 0, 5)
+	pc_amarelo_pecas = clamp(pc_amarelo_pecas + amarelas, 0, 5)
+	pc_vermelho_pecas = clamp(pc_vermelho_pecas + vermelhas, 0, 5)
+	jogou_minigame_labgrad = true
+
 
 #Plataformer
 var pontos_di: int = 0
