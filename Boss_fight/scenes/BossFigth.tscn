@@ -278,13 +278,14 @@ texture_filter = 1
 position = Vector2(511, 517)
 texture = ExtResource("2_207dp")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438935043 node_paths=PackedStringArray("nota", "animacao")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438935043 node_paths=PackedStringArray("nota", "animacao", "hint_label")]
 position = Vector2(528, 632)
 scale = Vector2(3, 3)
 script = ExtResource("3_l3g1m")
 inventory = Array[ExtResource("4_8b206")]([SubResource("Resource_j7wrs"), null, SubResource("Resource_dubn7"), null, null, null, null])
 nota = NodePath("../Control/Nota")
 animacao = NodePath("AnimatedSprite2D")
+hint_label = NodePath("../HUD/ExitHintLabel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2107741973]
 shape = SubResource("RectangleShape2D_epypp")
@@ -344,7 +345,7 @@ offset_top = -849.0
 offset_right = -233.909
 offset_bottom = -826.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Nota: "
+text = "Nota: 10"
 
 [node name="BarreiraCentral" type="StaticBody2D" parent="." unique_id=1863096041]
 
