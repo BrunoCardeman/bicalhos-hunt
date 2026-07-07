@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://5p6ypa3rjwti" path="res://Corredor/assets/cenario.png" id="2_dj6dp"]
 [ext_resource type="PackedScene" uid="uid://c5hvp8chemsaa" path="res://Corredor/scenes/npc.tscn" id="2_ngo62"]
 [ext_resource type="PackedScene" uid="uid://bekyqvpqa1hpd" path="res://Corredor/scenes/player.tscn" id="3_ngo62"]
-[ext_resource type="Script" uid="uid://dimmsm6u30exp" path="res://Corredor/scenes/porta.gd" id="4_7ivx2"]
+[ext_resource type="Script" path="res://Corredor/scenes/porta.gd" id="4_7ivx2"]
 [ext_resource type="Resource" uid="uid://dgbwaud31hai" path="res://npc1.dialogue" id="5_d288p"]
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="7_yitnv"]
 [ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="8_bsfda"]

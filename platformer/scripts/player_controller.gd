@@ -86,6 +86,7 @@ func update_points():
 		vencer_jogo()
 
 func vencer_jogo():
+	GlobalData.reputacao += points
 	GlobalData.voltou_do_platformer = true
 	GlobalData.resultado_di = "venceu"
 	GlobalData.jogou_minigame_di = true
@@ -94,6 +95,7 @@ func vencer_jogo():
 	get_tree().change_scene_to_file("res://platformer/scenes/menuPlatfomer.tscn")
 
 func perder_jogo():
+	GlobalData.reputacao -= points
 	GlobalData.voltou_do_platformer = true
 	GlobalData.resultado_di = "perdeu"
 	GlobalData.pontos_di = points

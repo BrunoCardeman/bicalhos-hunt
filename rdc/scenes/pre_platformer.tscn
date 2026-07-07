@@ -338,7 +338,7 @@ shape = SubResource("RectangleShape2D_r1mcl")
 position = Vector2(-136.04834, 27.524231)
 scale = Vector2(1.890322, 1.9863209)
 sprite_frames = SubResource("SpriteFrames_6v7tf")
-animation = &"down"
+animation = &"walk"
 autoplay = "idle"
 
 [node name="ExitHintLabel" type="CanvasLayer" parent="." unique_id=1991129657]
@@ -351,7 +351,6 @@ offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("9_pmpma")
 theme_override_font_sizes/font_size = 18
 text = "Pressione ESC para voltar ao mapa"
-
 
 [node name="Reputacao" type="Label" parent="." unique_id=1184691018]
 offset_left = 911.0

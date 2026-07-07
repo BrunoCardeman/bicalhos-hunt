@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://gkgnj7jmj7x4" path="res://Labgrad/scenes/parallax_2d.tscn" id="1_pw63i"]
 [ext_resource type="PackedScene" uid="uid://d0n5s3xj3g14j" path="res://Labgrad/scenes/dinossaur.tscn" id="1_w2twt"]
 [ext_resource type="FontFile" uid="uid://4873mmgvs1vt" path="res://Labgrad/assets/fonts/retro.ttf" id="4_pu3yx"]
+[ext_resource type="Script" uid="uid://cxr07qkaxst80" path="res://540/scenes/reputacao.gd" id="5_fqswo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gubc5"]
 
@@ -197,6 +198,17 @@ theme_override_colors/font_color = Color(1, 0.8784314, 0.4, 1)
 theme_override_fonts/font = ExtResource("4_pu3yx")
 text = "JOGO PAUSADO"
 horizontal_alignment = 1
+
+[node name="Reputacao" type="Label" parent="CanvasLayer" unique_id=536567448]
+offset_left = 745.0
+offset_top = 6.0
+offset_right = 1144.0
+offset_bottom = 32.0
+scale = Vector2(0.99731135, 1.6631075)
+theme_override_colors/font_color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+theme_override_fonts/font = ExtResource("4_pu3yx")
+theme_override_font_sizes/font_size = 20
+script = ExtResource("5_fqswo")
 
 [node name="GameOver" type="Control" parent="CanvasLayer" unique_id=1649574814]
 visible = false

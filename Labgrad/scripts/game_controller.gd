@@ -132,7 +132,7 @@ func configurar_visual_game_over() -> void:
 func _process(delta: float) -> void:
 	if estado_jogo != "jogando":
 		return
-
+	
 	tempo_jogo += delta
 	velocidade_atual = VELOCIDADE_INICIAL + tempo_jogo * ACELERACAO_POR_SEGUNDO
 	pontuacao += int(round(delta * 12.0))
@@ -145,7 +145,8 @@ func _process(delta: float) -> void:
 		timer_spawn = 0.0
 		spawnar_elemento()
 		definir_proximo_intervalo()
-
+		
+	update_rep()
 	limpar_elementos_antigos()
 	atualizar_hud()
 
@@ -261,7 +262,18 @@ func encerrar_partida() -> void:
 		pecas_vermelhas
 	]
 
-
+func update_rep() -> void:
+	if pecas_azuis >= 5:
+		GlobalData.reputacao += 50
+		pecas_azuis = 0
+	if pecas_amarelas >= 5:
+		GlobalData.reputacao += 70
+		pecas_amarelas = 0
+	if pecas_vermelhas >= 5:
+		GlobalData.reputacao += 100
+		pecas_vermelhas = 0
+		
+		
 func salvar_resultado_labgrad() -> void:
 	if resultado_salvo:
 		return

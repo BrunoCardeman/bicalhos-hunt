@@ -43,11 +43,8 @@ var iniciar_labgrad_direto: bool = false
 func add_item(item: String):
 	inventario.append(item)
 
-# Função auxiliar para garantir que a reputação fique sempre entre -10 e +10
 func alterar_reputacao(valor: int):
 	reputacao += valor
-	# clamp() força o valor a ficar dentro do mínimo e máximo permitidos
-	reputacao = clamp(reputacao, -10, 10) 
 
 # Função para resetar status ao dormir ou comer
 func recuperar_sono(quantidade: float):
